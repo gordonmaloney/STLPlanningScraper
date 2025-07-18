@@ -1,12 +1,12 @@
 name: Weekly Update
 
-# run at 00:00 UTC every Sunday, or trigger manually
+# Run every Sunday at 00:00 UTC, or manually via "Run workflow"
 on:
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
-# allow the job to push commits
+# Allow this job to push commits
 permissions:
   contents: write
 
@@ -15,31 +15,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) checkout your repo, keep the GITHUB_TOKEN available for pushes
-      - name: Checkout code
+      # 1) Checkout your code, enabling the built-in token for push
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # so git push will use the built-in token
-          fetch-depth: 0            # get full history (safer for commits)
+          fetch-depth: 0           # full history, safer for commits
+          persist-credentials: true  # so git push uses GITHUB_TOKEN
 
-      # 2) install Node.js and your npm deps
-      - name: Setup Node.js & install
+      # 2) Install Node.js and all dependencies
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
       - name: Install dependencies
         run: npm ci
 
-      # 3) run your combined scraper + post‑processor
+      # 3) Run your combined scraper + postprocess
       - name: Run search-and-save
         run: npm run search-and-save
 
-      # 4) commit & push only if there are changes
-      - name: Commit & push changes
+      # 4) Commit & push only the files you want (adjust paths as needed)
+      - name: Commit and push changes
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/NewData.jsx
-          # add any other paths you want to commit, e.g. data/applications.json
-          git diff --quiet --cached \
-            || (git commit -m "chore: weekly data push $(date -u +'%Y-%m-%d')" && git push)
+          # Stage only the generated files:
+          git add data/NewData.jsx data/applications.json
+          # If there are real changes, commit and push:
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: weekly data update $(date -u +'%Y-%m-%d')"
+            git push
+          else
+            echo "No data changes to commit"
+          fi
