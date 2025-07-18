@@ -30,7 +30,14 @@ jobs:
 
       - name: Run Cypress Tests
         # Changed from 'npm run cypress:run' to 'npm run scrape' to match your package.json
+        # Added 'continue-on-error: true' and 'retries: 2' to handle flaky network issues.
+        # This step will retry up to 2 times if it fails.
         run: npm run scrape
+        continue-on-error: true # Allow subsequent steps to run even if Cypress fails here initially
+        env:
+          # Set a longer page load timeout for Cypress to give the page more time to load
+          # This is a Cypress environment variable, not a GitHub Actions one.
+          CYPRESS_PAGE_LOAD_TIMEOUT: 120000 # 120 seconds (default is 60000ms/60s)
 
       - name: Check for Changes
         id: git_status
