@@ -1,78 +1,87 @@
 /// <reference types="cypress" />
 
+// ─── Prevent Cypress from failing on uncaught exceptions in the application under test ───
+Cypress.on("uncaught:exception", (err, runnable) => {
+  // return false to prevent Cypress from
+  // failing the test due to errors in the application
+  return false;
+});
+
 const URL_BASE = "https://citydev-portal.edinburgh.gov.uk";
-const SEARCH_PATH = "/idoxpa-web/search.do";
+const SEARCH_URL = `${URL_BASE}/idoxpa-web/search.do?action=advanced`;
 const SEARCH_PHRASE = "short term let";
-const DAYS_BACK = 90;
 const APPLICATIONS_FILE = `${Cypress.config(
   "fileServerFolder"
 )}/data/applications.json`;
+let newApplications = [];
 
-describe("Edinburgh planning scraper (HTTP mode)", () => {
-  it("fetches and writes applications.json", () => {
-    // 1) Build the date string "DD/MM/YYYY"
-    const d = new Date();
-    d.setDate(d.getDate() - DAYS_BACK);
-    const day = String(d.getDate()).padStart(2, "0");
-    const month = String(d.getMonth() + 1).padStart(2, "0");
-    const year = d.getFullYear();
-    const formattedDate = `${day}/${month}/${year}`;
+const getDaysAgo = (days) => {
+  const date = new Date();
+  date.setDate(date.getDate() - days);
+  return date;
+};
 
-    // 2) Fetch via HTTP
-    cy.request({
-      url: URL_BASE + SEARCH_PATH,
-      qs: {
-        action: "advanced",
-        description: SEARCH_PHRASE,
-        caseStatus: "Awaiting Assessment",
-        applicationReceivedStart: formattedDate,
-      },
-      headers: { "User-Agent": "Mozilla/5.0" },
-      failOnStatusCode: false, // don’t automatically fail on 4xx/5xx
-    }).then((resp) => {
-      // 3) Ensure we got HTML back
-      expect(resp.status).to.equal(200);
+const START_DATE = getDaysAgo(90);
 
-      // 4) Parse with the browser DOMParser
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(resp.body, "text/html");
+const getPostcode = (string) => {
+  const match = string.match(/[a-z0-9]{3,4}\s[a-z0-9]{3,4}$/i);
+  return match ? match[0] : "";
+};
 
-      // 5) Scrape each result row
-      const apps = Array.from(doc.querySelectorAll("#searchresults li")).map(
-        (li) => {
-          const linkEl = li.querySelector("a");
-          const href = linkEl?.getAttribute("href") || "";
-          const proposal = linkEl?.textContent.trim() || "";
+describe("Searches Edinburgh council planning site", () => {
+  it("Finds new applications", () => {
+    cy.visit(SEARCH_URL, {
+      // if the page returns 4xx/5xx, don’t fail here
+      failOnStatusCode: false,
+    });
 
-          const metaText =
-            li
-              .querySelector(".metaInfo")
-              ?.textContent.replace(/\s+/g, " ")
-              .trim() || "";
-          const [refNo, received, validated, status] = metaText.split(" | ");
+    cy.get("#description").type(SEARCH_PHRASE);
+    cy.get("#caseStatus").select("Awaiting Assessment");
+    cy.get("#applicationReceivedStart").type(
+      [
+        START_DATE.getDate(),
+        START_DATE.getMonth() + 1, // month is 0‑based
+        START_DATE.getFullYear(),
+      ].join("/")
+    );
 
-          const address =
-            li.querySelector(".address")?.textContent.trim() || "";
-          const postcode =
-            (address.match(/[A-Za-z0-9]{3,4}\s[A-Za-z0-9]{3,4}$/) || [])[0] ||
-            "";
+    cy.get('input[type="submit"]').contains("Search").click();
 
-          return {
-            link: URL_BASE + href,
-            proposal,
+    cy.get(".content")
+      .then(($el) => $el.find("#resultsPerPage").length)
+      .then((hasResults) => {
+        if (!hasResults) return;
+
+        cy.get("#resultsPerPage").select("100");
+        cy.get('input[type="submit"]').contains("Go").click();
+
+        cy.get("#searchresults li").each(($li) => {
+          const $link = $li.find("a");
+          const [refNo, received, validated, status] = $li
+            .find(".metaInfo")
+            .text()
+            .trim()
+            .replace(/\n/g, "")
+            .replace(/\s+/g, " ")
+            .split(" | ");
+          const address = $li.find(".address").text().trim();
+
+          newApplications.push({
+            link: `${URL_BASE}${$link.attr("href")}`,
+            proposal: $link.text().trim(),
             address,
-            postcode,
+            postcode: getPostcode(address),
             refNo,
             received,
             validated,
             status,
-          };
-        }
-      );
+          });
+        });
+      });
+  });
 
-      // 6) Write the JSON out
-      cy.writeFile(APPLICATIONS_FILE, apps, { spaces: 2 });
-      cy.log(`💾 Wrote ${apps.length} applications`);
-    });
+  it("Saves new applications", () => {
+    // even if newApplications is empty, we write an empty array
+    cy.writeFile(APPLICATIONS_FILE, JSON.stringify(newApplications, null, 2));
   });
 });
