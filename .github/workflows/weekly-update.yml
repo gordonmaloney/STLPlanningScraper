@@ -29,10 +29,8 @@ jobs:
       # 3) install & run inside the cypress folder, just like before
       - name: Install & run scraper
         run: |
-          cd cypress
           npm ci
           npm run search-and-save
-          cd ..
 
       # 4) commit & push everything (including data/NewData.jsx, etc.)
       - name: Commit and push changes
