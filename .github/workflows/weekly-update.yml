@@ -29,9 +29,8 @@ jobs:
         run: npm ci # 'npm ci' is preferred over 'npm install' in CI environments
 
       - name: Run Cypress Tests
-        # Assuming you have a script like "cypress:run": "cypress run" in your package.json
-        # Or you can directly use "cypress run" if Cypress is globally installed or in node_modules/.bin
-        run: npm run cypress:run
+        # Changed from 'npm run cypress:run' to 'npm run scrape' to match your package.json
+        run: npm run scrape
 
       - name: Check for Changes
         id: git_status
