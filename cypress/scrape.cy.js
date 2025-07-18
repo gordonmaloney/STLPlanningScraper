@@ -1,82 +1,78 @@
 /// <reference types="cypress" />
 
-// ───────────── Ignore uncaught exceptions from the page ─────────────
-Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from
-  // failing the test due to errors in the application under test
-  return false
-})
+const URL_BASE = "https://citydev-portal.edinburgh.gov.uk";
+const SEARCH_PATH = "/idoxpa-web/search.do";
+const SEARCH_PHRASE = "short term let";
+const DAYS_BACK = 90;
+const APPLICATIONS_FILE = `${Cypress.config(
+  "fileServerFolder"
+)}/data/applications.json`;
 
-const URL_BASE = "https://citydev-portal.edinburgh.gov.uk"
-const SEARCH_URL = `${URL_BASE}/idoxpa-web/search.do?action=advanced`
-const SEARCH_PHRASE = "short term let"
-const APPLICATIONS_FILE = `${Cypress.config("fileServerFolder")}/data/applications.json`
+describe("Edinburgh planning scraper (HTTP mode)", () => {
+  it("fetches and writes applications.json", () => {
+    // 1) Build the date string "DD/MM/YYYY"
+    const d = new Date();
+    d.setDate(d.getDate() - DAYS_BACK);
+    const day = String(d.getDate()).padStart(2, "0");
+    const month = String(d.getMonth() + 1).padStart(2, "0");
+    const year = d.getFullYear();
+    const formattedDate = `${day}/${month}/${year}`;
 
-describe("Searches Edinburgh council planning site", () => {
-  it("scrapes and saves new applications", () => {
-    // helper: get N days ago, zero‑pad day/month
-    const getDaysAgo = (days) => {
-      const d = new Date()
-      d.setDate(d.getDate() - days)
-      return d
-    }
-    const START_DATE = getDaysAgo(90)
-    const day   = String(START_DATE.getDate()).padStart(2, "0")
-    const month = String(START_DATE.getMonth() + 1).padStart(2, "0") // +1 b/c zero-based
-    const year  = START_DATE.getFullYear()
-    const formattedDate = `${day}/${month}/${year}`
+    // 2) Fetch via HTTP
+    cy.request({
+      url: URL_BASE + SEARCH_PATH,
+      qs: {
+        action: "advanced",
+        description: SEARCH_PHRASE,
+        caseStatus: "Awaiting Assessment",
+        applicationReceivedStart: formattedDate,
+      },
+      headers: { "User-Agent": "Mozilla/5.0" },
+      failOnStatusCode: false, // don’t automatically fail on 4xx/5xx
+    }).then((resp) => {
+      // 3) Ensure we got HTML back
+      expect(resp.status).to.equal(200);
 
-    // helper: extract postcode from address string
-    const getPostcode = (str) => {
-      const match = str.match(/[A-Za-z0-9]{3,4}\s[A-Za-z0-9]{3,4}$/)
-      return match ? match[0] : ""
-    }
+      // 4) Parse with the browser DOMParser
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(resp.body, "text/html");
 
-    const newApplications = []
+      // 5) Scrape each result row
+      const apps = Array.from(doc.querySelectorAll("#searchresults li")).map(
+        (li) => {
+          const linkEl = li.querySelector("a");
+          const href = linkEl?.getAttribute("href") || "";
+          const proposal = linkEl?.textContent.trim() || "";
 
-    // 1) Visit & fill form
-    cy.visit(SEARCH_URL)
-    cy.get("#description").clear().type(SEARCH_PHRASE)
-    cy.get("#caseStatus").select("Awaiting Assessment")
-    cy.get("#applicationReceivedStart").clear().type(formattedDate)
-    cy.get('input[type="submit"]').contains("Search").click()
+          const metaText =
+            li
+              .querySelector(".metaInfo")
+              ?.textContent.replace(/\s+/g, " ")
+              .trim() || "";
+          const [refNo, received, validated, status] = metaText.split(" | ");
 
-    // 2) If there are results, set page size, then scrape
-    cy.get(".content").then($content => {
-      if (!$content.find("#resultsPerPage").length) {
-        // no results → skip scraping
-        return
-      }
+          const address =
+            li.querySelector(".address")?.textContent.trim() || "";
+          const postcode =
+            (address.match(/[A-Za-z0-9]{3,4}\s[A-Za-z0-9]{3,4}$/) || [])[0] ||
+            "";
 
-      cy.get("#resultsPerPage").select("100")
-      cy.get('input[type="submit"]').contains("Go").click()
+          return {
+            link: URL_BASE + href,
+            proposal,
+            address,
+            postcode,
+            refNo,
+            received,
+            validated,
+            status,
+          };
+        }
+      );
 
-      cy.get("#searchresults li").each($li => {
-        const $link = $li.find("a")
-        const metaText = $li.find(".metaInfo").text()
-          .replace(/\n/g, "")
-          .replace(/\s+/g, " ")
-          .trim()
-        const [refNo, received, validated, status] = metaText.split(" | ")
-        const address = $li.find(".address").text().trim()
-
-        newApplications.push({
-          link:      `${URL_BASE}${$link.attr("href")}`,
-          proposal:  $link.text().trim(),
-          address,
-          postcode:  getPostcode(address),
-          refNo,
-          received,
-          validated,
-          status
-        })
-      })
-    })
-    // 3) After scraping, write out the file
-    .then(() => {
-      expect(newApplications.length).to.be.greaterThan(0) // sanity check
-      cy.log(`💾 Writing ${newApplications.length} applications`)
-      cy.writeFile(APPLICATIONS_FILE, JSON.stringify(newApplications, null, 2))
-    })
-  })
-})
+      // 6) Write the JSON out
+      cy.writeFile(APPLICATIONS_FILE, apps, { spaces: 2 });
+      cy.log(`💾 Wrote ${apps.length} applications`);
+    });
+  });
+});
