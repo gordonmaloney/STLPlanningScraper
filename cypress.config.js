@@ -8,7 +8,16 @@ module.exports = defineConfig({
     // If you’ve got no support file, disable it:
     supportFile: false,
 
-    // (Optional) set a baseUrl so you can use cy.visit('/')
-    // baseUrl: 'https://your-target-site.com',
+    setupNodeEvents(on, config) {
+      on("task", {
+        log(output) {
+          console.log(output);
+          return null;
+        },
+      });
+    },
   },
+  defaultCommandTimeout: 10000,
+  screenshotOnRunFailure: false,
+  watchForFileChanges: false,
 });
