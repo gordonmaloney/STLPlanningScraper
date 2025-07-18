@@ -2,41 +2,25 @@ name: Weekly Update
 
 on:
   schedule:
-    - cron: '0 0 * * 0'    # every Sunday at midnight UTC
-  workflow_dispatch:
-
-# allow the checkout step to push back
-permissions:
-  contents: write
+    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC. Adjust as needed.
+  workflow_dispatch:     # Allows you to manually trigger the workflow.
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) checkout makes GITHUB_TOKEN available for pushes
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          persist-credentials: true
 
-      # 2) setup Node (v2 is fine if you prefer)
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '18'  # Use the version required by your project
 
-      # 3) install & run inside the cypress folder, just like before
-      - name: Install & run scraper
+      - name: Install dependencies
         run: |
-          npm ci
-          npm run search-and-save
+          npm install
 
-      # 4) commit & push everything (including data/NewData.jsx, etc.)
-      - name: Commit and push changes
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git diff --quiet --cached || git commit -m "chore: weekly data push $(date -u +'%Y-%m-%d')"
-          git push
+      - name: Run update script
+        run: npm run search-and-save
