@@ -1,12 +1,11 @@
-# .github/workflows/weekly-update.yml
-
 name: Weekly Update
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * 0'    # every Sunday at midnight UTC
   workflow_dispatch:
 
+# allow the checkout step to push back
 permissions:
   contents: write
 
@@ -15,36 +14,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      # 1) checkout makes GITHUB_TOKEN available for pushes
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           persist-credentials: true
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      # 2) setup Node (v2 is fine if you prefer)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: '18'
 
-      - name: Install deps
-        run: npm ci
-
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v5
-        with:
-          spec: cypress/scrape.cy.js
-          browser: electron
-          record: false
-
-      - name: Post‑process & commit
+      # 3) install & run inside the cypress folder, just like before
+      - name: Install & run scraper
         run: |
-          npm run postprocess
+          cd cypress
+          npm ci
+          npm run search-and-save
+          cd ..
+
+      # 4) commit & push everything (including data/NewData.jsx, etc.)
+      - name: Commit and push changes
+        run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/NewData.jsx data/applications.json
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: weekly data update $(date -u +'%Y-%m-%d')"
-            git push
-          else
-            echo "No changes to commit"
-          fi
+          git add .
+          git diff --quiet --cached || git commit -m "chore: weekly data push $(date -u +'%Y-%m-%d')"
+          git push
