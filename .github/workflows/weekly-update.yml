@@ -1,38 +1,45 @@
 name: Weekly Update
 
+# run at 00:00 UTC every Sunday, or trigger manually
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC. Adjust as needed.
-  workflow_dispatch:     # Allows you to manually trigger the workflow.
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+# allow the job to push commits
+permissions:
+  contents: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      # 1) checkout your repo, keep the GITHUB_TOKEN available for pushes
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          node-version: '18'  # Use the version required by your project
+          persist-credentials: true  # so git push will use the built-in token
+          fetch-depth: 0            # get full history (safer for commits)
 
-      - name: Install dependencies in Cypress folder
+      # 2) install Node.js and your npm deps
+      - name: Setup Node.js & install
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci
+
+      # 3) run your combined scraper + post‑processor
+      - name: Run search-and-save
+        run: npm run search-and-save
+
+      # 4) commit & push only if there are changes
+      - name: Commit & push changes
         run: |
-          cd cypress
-          npm install
-          cd ..
-
-
-
-      - name: Run update script
-        run: pm run search-and-save
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Weekly data push" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gordonmaloney/STLPlanningScraper.git HEAD:main
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/NewData.jsx
+          # add any other paths you want to commit, e.g. data/applications.json
+          git diff --quiet --cached \
+            || (git commit -m "chore: weekly data push $(date -u +'%Y-%m-%d')" && git push)
