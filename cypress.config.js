@@ -1,22 +1,17 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    // Look for any .cy.js/.cy.ts under cypress/ (including the root)
-    specPattern: "cypress/**/*.cy.{js,ts}",
-
-
-
     setupNodeEvents(on, config) {
-      on("task", {
+      on('task', {
         log(output) {
-          console.log(output);
-          return null;
-        },
-      });
+          console.log(output)
+          return null
+        }
+      })
     },
   },
   defaultCommandTimeout: 10000,
   screenshotOnRunFailure: false,
-  watchForFileChanges: false,
+  watchForFileChanges: false
 });

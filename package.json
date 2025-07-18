@@ -4,7 +4,7 @@
   "main": "index.js",
 
   "scripts": {
-    "scrape": "cypress run --spec cypress/scrape.cy.js",
+    "scrape": "cypress run --spec cypress/e2e/scrape.cy.js",
 
     "postprocess": "node ./scripts/updateAndSave.js",
 
