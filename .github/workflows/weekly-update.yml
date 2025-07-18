@@ -1,0 +1,38 @@
+name: Weekly Update
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC. Adjust as needed.
+  workflow_dispatch:     # Allows you to manually trigger the workflow.
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'  # Use the version required by your project
+
+      - name: Install dependencies in Cypress folder
+        run: |
+          cd cypress
+          npm install
+          cd ..
+
+
+
+      - name: Run update script
+        run: pm run search-and-save
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Weekly data push" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/gordonmaloney/STLPlanningScraper.git HEAD:main
