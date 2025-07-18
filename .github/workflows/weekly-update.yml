@@ -1,26 +1,63 @@
-name: Weekly Update
+# .github/workflows/cypress-weekly.yml
+
+name: Weekly Cypress Run and Push
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC. Adjust as needed.
-  workflow_dispatch:     # Allows you to manually trigger the workflow.
+    # Runs every Sunday at midnight UTC
+    # You can adjust the cron schedule as needed.
+    # For example: '0 0 * * 1' for Monday, '0 0 * * *' for daily.
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    # Allows you to manually trigger the workflow from the GitHub Actions tab
 
 jobs:
-  update:
-    runs-on: ubuntu-latest
+  cypress_run:
+    runs-on: ubuntu-latest # You can use 'windows-latest' or 'macos-latest' if needed
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # Use v4 for the latest features
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4 # Use v4 for the latest features
         with:
-          node-version: '18'  # Use the version required by your project
+          node-version: '20' # Specify your Node.js version (e.g., '16', '18', '20')
+          cache: 'npm' # Cache npm dependencies for faster builds
 
-      - name: Install dependencies
+      - name: Install Dependencies
+        run: npm ci # 'npm ci' is preferred over 'npm install' in CI environments
+
+      - name: Run Cypress Tests
+        # Assuming you have a script like "cypress:run": "cypress run" in your package.json
+        # Or you can directly use "cypress run" if Cypress is globally installed or in node_modules/.bin
+        run: npm run cypress:run
+
+      - name: Check for Changes
+        id: git_status
         run: |
-          npm install
+          # Check if there are any changes (new files, modified files, deleted files)
+          # The output is empty if there are no changes
+          echo "::set-output name=status::$(git status --porcelain)"
 
-      - name: Run update script
-        run: npm run search-and-save
+      - name: Configure Git User
+        # Only run this step if there are changes
+        if: steps.git_status.outputs.status != ''
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+      - name: Commit and Push Changes
+        # Only run this step if there are changes
+        if: steps.git_status.outputs.status != ''
+        run: |
+          git add .
+          git commit -m "Automated Cypress run results [skip ci]"
+          # The "skip ci" tag prevents this commit from triggering another workflow run,
+          # avoiding infinite loops.
+          git push
+        env:
+          # GITHUB_TOKEN is automatically provided by GitHub Actions and has permissions
+          # to push to the repository.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
