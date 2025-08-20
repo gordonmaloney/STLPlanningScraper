@@ -4,66 +4,61 @@ name: Weekly Cypress Run and Push
 
 on:
   schedule:
-    # Runs every Sunday at midnight UTC
-    # You can adjust the cron schedule as needed.
-    # For example: '0 0 * * 1' for Monday, '0 0 * * *' for daily.
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * 0'   # Sundays at 00:00 UTC
   workflow_dispatch:
-    # Allows you to manually trigger the workflow from the GitHub Actions tab
+
+# 👇 Request write access for the GITHUB_TOKEN
+permissions:
+  contents: write
 
 jobs:
   cypress_run:
-    runs-on: ubuntu-latest # You can use 'windows-latest' or 'macos-latest' if needed
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4 # Use v4 for the latest features
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0           # safer for pushes/tags
+          token: ${{ secrets.GITHUB_TOKEN }}  # explicit (default, but be clear)
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4 # Use v4 for the latest features
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' # Specify your Node.js version (e.g., '16', '18', '20')
-          cache: 'npm' # Cache npm dependencies for faster builds
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci # 'npm ci' is preferred over 'npm install' in CI environments
+        run: npm ci
 
       - name: Run Cypress Tests
-        # Changed from 'npm run cypress:run' to 'npm run scrape' to match your package.json
-        # Added 'continue-on-error: true' and 'retries: 2' to handle flaky network issues.
-        # This step will retry up to 2 times if it fails.
         run: npm run scrape
-        continue-on-error: true # Allow subsequent steps to run even if Cypress fails here initially
+        continue-on-error: true
         env:
-          # Set a longer page load timeout for Cypress to give the page more time to load
-          # This is a Cypress environment variable, not a GitHub Actions one.
-          CYPRESS_PAGE_LOAD_TIMEOUT: 120000 # 120 seconds (default is 60000ms/60s)
+          CYPRESS_PAGE_LOAD_TIMEOUT: 120000
 
       - name: Check for Changes
         id: git_status
+        shell: bash
         run: |
-          # Check if there are any changes (new files, modified files, deleted files)
-          # The output is empty if there are no changes
-          echo "::set-output name=status::$(git status --porcelain)"
+          STATUS="$(git status --porcelain)"
+          # new way to set step outputs:
+          echo "status<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$STATUS" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
-      - name: Configure Git User
-        # Only run this step if there are changes
+      - name: Configure Git (only if changes)
         if: steps.git_status.outputs.status != ''
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          # ensure pushes use the token:
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
 
       - name: Commit and Push Changes
-        # Only run this step if there are changes
         if: steps.git_status.outputs.status != ''
         run: |
-          git add .
-          git commit -m "Automated Cypress run results [skip ci]"
-          # The "skip ci" tag prevents this commit from triggering another workflow run,
-          # avoiding infinite loops.
-          git push
-        env:
-          # GITHUB_TOKEN is automatically provided by GitHub Actions and has permissions
-          # to push to the repository.
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+          git add -A
+          git commit -m "Automated Cypress run results [skip ci]" || echo "No changes to commit."
+          # push back to the same branch this workflow runs on:
+          git push origin HEAD:${{ github.ref_name }}
