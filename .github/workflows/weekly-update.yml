@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Run Cypress Tests
-        run: npm run search-and-save
+        run: npm run
         continue-on-error: true
         env:
           CYPRESS_PAGE_LOAD_TIMEOUT: 120000
