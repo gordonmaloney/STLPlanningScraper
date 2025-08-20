@@ -11,7 +11,36 @@ on:
 permissions:
   contents: write
 
+
+  # .github/workflows/scrape.yml  (snippet)
 jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: '20'
+      # Force Node/Cypress to prefer IPv4 in case IPv6 path is broken
+      NODE_OPTIONS: --dns-result-order=ipv4first
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print runner IPs (egress debug)
+        run: |
+          echo "Public IPv4:" $(curl -4 -s https://ifconfig.me || true)
+          echo "Public IPv6:" $(curl -6 -s https://ifconfig.me || true)
+
+      - name: DNS + TLS reachability for target host
+        run: |
+          set -x
+          nslookup citydev-portal.edinburgh.gov.uk || true
+          # Try IPv4 with a real browser UA and show full TLS/HTTP trace
+          curl --ipv4 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+               -I -L -v https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced || exit 2
+
+      - name: Save curl trace
+        if: failure()
+        run: echo "Curl failed above; likely IP/geo/UA block or TLS path issue."
+
+
   cypress_run:
     runs-on: ubuntu-latest
 
