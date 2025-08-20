@@ -30,22 +30,58 @@ jobs:
           getent hosts citydev-portal.edinburgh.gov.uk || true
           nslookup citydev-portal.edinburgh.gov.uk || true
 
-      - name: TLS/HTTP reachability (IPv4, real UA)
+      - name: TLS/HTTP reachability matrix
         run: |
           set -x
           mkdir -p logs
+
+          # 1) Simple GET, HTTP/2 allowed (default), verbose + trace
           curl --ipv4 \
                -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+               -H "Accept-Language: en-GB,en;q=0.9" \
+               -H "Referer: https://citydev-portal.edinburgh.gov.uk/" \
+               -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
+               -o /dev/null --trace-ascii logs/01_get.trace 2> logs/01_get.verbose || true
+
+          # 2) Force HTTP/1.1 (some WAFs dislike h2)
+          curl --ipv4 --http1.1 \
+               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+               -H "Accept-Language: en-GB,en;q=0.9" \
+               -H "Referer: https://citydev-portal.edinburgh.gov.uk/" \
+               -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
+               -o /dev/null --trace-ascii logs/02_get_http11.trace 2> logs/02_get_http11.verbose || true
+
+          # 3) HEAD (some servers reject this; useful to prove that’s the issue)
+          curl --ipv4 --http1.1 \
+               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
                -I -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
-               -o /dev/null 2> logs/curl_verbose.txt
-        # If curl exits non-zero, we want the job to fail.
-      
-      - name: Upload curl trace
+               -o /dev/null --trace-ascii logs/03_head_http11.trace 2> logs/03_head_http11.verbose || true
+
+          # 4) Fetch a VERY lightweight path (robots.txt) as a control
+          curl --ipv4 --http1.1 \
+               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+               -L -v "https://citydev-portal.edinburgh.gov.uk/robots.txt" \
+               -o /dev/null --trace-ascii logs/04_robots.trace 2> logs/04_robots.verbose || true
+
+          # 5) TLS-only check (prove handshake works; if this fails, it’s hard block)
+          echo | openssl s_client -connect citydev-portal.edinburgh.gov.uk:443 -servername citydev-portal.edinburgh.gov.uk > logs/05_s_client.txt 2>&1 || true
+
+          # Fail job if ALL HTTP attempts failed (no 2xx/3xx/4xx in verbose logs)
+          HIT=$(grep -Eh "HTTP/[12]\.[01] [2345][0-9][0-9]" logs/*.verbose | wc -l)
+          if [ "$HIT" -eq 0 ]; then
+            echo "No HTTP response lines found; likely WAF/IP reset."
+            exit 2
+          fi
+
+      - name: Upload preflight artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: preflight-logs
-          path: logs/curl_verbose.txt
+          path: logs/*
+
 
   cypress_run:
     name: Run Cypress and push results
