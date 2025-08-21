@@ -27,40 +27,49 @@ async function fetchLatLon(app) {
 }
 
 async function main() {
-  console.log('🔄  Running combined update…')
+  console.log("🔄  Running combined update…");
 
   // 1) Load scraped data
-  const dataPath = path.resolve(__dirname, '../data/applications.json')
-  const raw       = await fs.readFile(dataPath, 'utf8')
-  const apps      = JSON.parse(raw)
+  const dataPath = path.resolve(__dirname, "../data/applications.json");
+  const raw = await fs.readFile(dataPath, "utf8");
+  const apps = JSON.parse(raw);
 
   // 2) Enrich with lat/lon
-  const withLatLon = await Promise.all(apps.map(fetchLatLon))
+  const withLatLon = await Promise.all(apps.map(fetchLatLon));
 
   // 3) Write back JSON
-  await fs.writeFile(dataPath, JSON.stringify(withLatLon, null, 2))
-  console.log(`✅ applications.json updated (${withLatLon.length} records)`)
+  await fs.writeFile(dataPath, JSON.stringify(withLatLon, null, 2));
+  console.log(`✅ applications.json updated (${withLatLon.length} records)`);
 
   // 4) Massage for frontend
-  const modified = withLatLon.map(app => ({
+  const modified = withLatLon.map((app) => ({
     ...app,
-    link:      app.link,
+    link: app.link,
     reference: app.refNo,
-    title:     app.proposal,
-    url:       undefined,
-    refNo:     undefined,
-    proposal:  undefined,
-  }))
+    title: app.proposal,
+    url: undefined,
+    refNo: undefined,
+    proposal: undefined,
+  }));
 
-  const fileContent = `export const PlanningApps = ${JSON.stringify(modified, null, 2)};`
+  const fileContent = `export const PlanningApps = ${JSON.stringify(
+    modified,
+    null,
+    2
+  )};`;
 
   // 5) Dump into data/NewData.jsx
-  const dataDir = path.resolve(__dirname, '../data')
+  const dataDir = path.resolve(__dirname, "../data");
   await fs.mkdir(dataDir, { recursive: true });
   const outFile = path.join(dataDir, "NewData.jsx");
-  await fs.writeFile(outFile, fileContent, 'utf8')
+  await fs.writeFile(outFile, fileContent, "utf8");
 
-  console.log(`✅ NewData.jsx written to ${outFile}`)
+  console.log(`✅ NewData.jsx written to ${outFile}`);
+
+  // also write JSON for frontend
+  const jsonOutFile = path.join(dataDir, "NewData.json");
+  await fs.writeFile(jsonOutFile, JSON.stringify(modified, null, 2), "utf8");
+  console.log(`✅ NewData.json written to ${jsonOutFile}`);
 }
 
 main().catch(err => {
