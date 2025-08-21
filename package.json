@@ -2,20 +2,21 @@
   "name": "stlplanningscraper",
   "version": "1.0.0",
   "main": "index.js",
-
   "scripts": {
+    "full": "npm run scrape && npm run postprocess && git add . && git commit -m 'weekly local data push' && git push",
     "scrape": "cypress run",
-
+    "test": "node ./scripts/test.cjs",
     "postprocess": "node ./scripts/updateAndSave.js",
-
     "search-and-save": "npm run scrape && npm run postprocess"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "cypress": "^14.5.2"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
