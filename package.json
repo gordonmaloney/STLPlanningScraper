@@ -5,6 +5,7 @@
   "scripts": {
     "full": "npm run scrape && npm run postprocess && git add . && git commit -m 'weekly local data push' && git push",
     "scrape": "cypress run",
+    "scrape-headed": "cypress run --headed --no-sandbox", 
     "test": "node ./scripts/test.cjs",
     "postprocess": "node ./scripts/updateAndSave.js",
     "search-and-save": "npm run scrape && npm run postprocess"

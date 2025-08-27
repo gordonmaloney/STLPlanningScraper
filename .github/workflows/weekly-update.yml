@@ -3,90 +3,89 @@ name: Weekly Cypress Run and Push
 
 on:
   schedule:
-    - cron: '0 0 * * 0'   # Sundays at 00:00 UTC
+    - cron: "0 0 * * 0" # Sundays at 00:00 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  preflight:
-    name: Preflight network checks
-    runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: '20'
-      NODE_OPTIONS: --dns-result-order=ipv4first
-    steps:
-      - uses: actions/checkout@v4
+  # preflight:
+  #   name: Preflight network checks
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     NODE_VERSION: "20"
+  #     NODE_OPTIONS: --dns-result-order=ipv4first
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Print runner egress IPs
-        run: |
-          echo "Public IPv4: $(curl -4 -s https://ifconfig.me || true)"
-          echo "Public IPv6: $(curl -6 -s https://ifconfig.me || true)"
+  #     - name: Print runner egress IPs
+  #       run: |
+  #         echo "Public IPv4: $(curl -4 -s https://ifconfig.me || true)"
+  #         echo "Public IPv6: $(curl -6 -s https://ifconfig.me || true)"
 
-      - name: DNS reachability
-        run: |
-          set -x
-          getent hosts citydev-portal.edinburgh.gov.uk || true
-          nslookup citydev-portal.edinburgh.gov.uk || true
+  #     - name: DNS reachability
+  #       run: |
+  #         set -x
+  #         getent hosts citydev-portal.edinburgh.gov.uk || true
+  #         nslookup citydev-portal.edinburgh.gov.uk || true
 
-      - name: TLS/HTTP reachability matrix
-        run: |
-          set -x
-          mkdir -p logs
+  #     - name: TLS/HTTP reachability matrix
+  #       run: |
+  #         set -x
+  #         mkdir -p logs
 
-          # 1) Simple GET, HTTP/2 allowed (default), verbose + trace
-          curl --ipv4 \
-               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
-               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
-               -H "Accept-Language: en-GB,en;q=0.9" \
-               -H "Referer: https://citydev-portal.edinburgh.gov.uk/" \
-               -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
-               -o /dev/null --trace-ascii logs/01_get.trace 2> logs/01_get.verbose || true
+  #         # 1) Simple GET, HTTP/2 allowed (default), verbose + trace
+  #         curl --ipv4 \
+  #              -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+  #              -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+  #              -H "Accept-Language: en-GB,en;q=0.9" \
+  #              -H "Referer: https://citydev-portal.edinburgh.gov.uk/" \
+  #              -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
+  #              -o /dev/null --trace-ascii logs/01_get.trace 2> logs/01_get.verbose || true
 
-          # 2) Force HTTP/1.1 (some WAFs dislike h2)
-          curl --ipv4 --http1.1 \
-               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
-               -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
-               -H "Accept-Language: en-GB,en;q=0.9" \
-               -H "Referer: https://citydev-portal.edinburgh.gov.uk/" \
-               -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
-               -o /dev/null --trace-ascii logs/02_get_http11.trace 2> logs/02_get_http11.verbose || true
+  #         # 2) Force HTTP/1.1 (some WAFs dislike h2)
+  #         curl --ipv4 --http1.1 \
+  #              -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+  #              -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" \
+  #              -H "Accept-Language: en-GB,en;q=0.9" \
+  #              -H "Referer: https://citydev-portal.edinburgh.gov.uk/" \
+  #              -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
+  #              -o /dev/null --trace-ascii logs/02_get_http11.trace 2> logs/02_get_http11.verbose || true
 
-          # 3) HEAD (some servers reject this; useful to prove that’s the issue)
-          curl --ipv4 --http1.1 \
-               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
-               -I -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
-               -o /dev/null --trace-ascii logs/03_head_http11.trace 2> logs/03_head_http11.verbose || true
+  #         # 3) HEAD (some servers reject this; useful to prove that’s the issue)
+  #         curl --ipv4 --http1.1 \
+  #              -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+  #              -I -L -v "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/search.do?action=advanced" \
+  #              -o /dev/null --trace-ascii logs/03_head_http11.trace 2> logs/03_head_http11.verbose || true
 
-          # 4) Fetch a VERY lightweight path (robots.txt) as a control
-          curl --ipv4 --http1.1 \
-               -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
-               -L -v "https://citydev-portal.edinburgh.gov.uk/robots.txt" \
-               -o /dev/null --trace-ascii logs/04_robots.trace 2> logs/04_robots.verbose || true
+  #         # 4) Fetch a VERY lightweight path (robots.txt) as a control
+  #         curl --ipv4 --http1.1 \
+  #              -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36" \
+  #              -L -v "https://citydev-portal.edinburgh.gov.uk/robots.txt" \
+  #              -o /dev/null --trace-ascii logs/04_robots.trace 2> logs/04_robots.verbose || true
 
-          # 5) TLS-only check (prove handshake works; if this fails, it’s hard block)
-          echo | openssl s_client -connect citydev-portal.edinburgh.gov.uk:443 -servername citydev-portal.edinburgh.gov.uk > logs/05_s_client.txt 2>&1 || true
+  #         # 5) TLS-only check (prove handshake works; if this fails, it’s hard block)
+  #         echo | openssl s_client -connect citydev-portal.edinburgh.gov.uk:443 -servername citydev-portal.edinburgh.gov.uk > logs/05_s_client.txt 2>&1 || true
 
-          # Fail job if ALL HTTP attempts failed (no 2xx/3xx/4xx in verbose logs)
-          HIT=$(grep -Eh "HTTP/[12]\.[01] [2345][0-9][0-9]" logs/*.verbose | wc -l)
-          if [ "$HIT" -eq 0 ]; then
-            echo "No HTTP response lines found; likely WAF/IP reset."
-            exit 2
-          fi
+  #         # Fail job if ALL HTTP attempts failed (no 2xx/3xx/4xx in verbose logs)
+  #         HIT=$(grep -Eh "HTTP/[12]\.[01] [2345][0-9][0-9]" logs/*.verbose | wc -l)
+  #         if [ "$HIT" -eq 0 ]; then
+  #           echo "No HTTP response lines found; likely WAF/IP reset."
+  #           exit 2
+  #         fi
 
-      - name: Upload preflight artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: preflight-logs
-          path: logs/*
-
+  # - name: Upload preflight artifacts
+  #   if: always()
+  #   uses: actions/upload-artifact@v4
+  #   with:
+  #     name: preflight-logs
+  #     path: logs/*
 
   cypress_run:
     name: Run Cypress and push results
     runs-on: ubuntu-latest
-    needs: preflight   # only run if preflight succeeded
+    # needs: preflight # only run if preflight succeeded
     env:
       NODE_OPTIONS: --dns-result-order=ipv4first
     steps:
@@ -99,8 +98,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk2.0-0 libgtk-3-0 libnotify-dev \
+                                  libgconf-2-4 libnss3 libxss1 libasound2 \
+                                  xvfb
 
       - name: Install Dependencies
         run: npm ci
