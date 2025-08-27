@@ -116,35 +116,35 @@ jobs:
         env:
           CYPRESS_PAGE_LOAD_TIMEOUT: 120000
 
-      - name: Upload Cypress artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-artifacts
-          path: |
-            cypress/screenshots
-            cypress/videos
-            cypress/logs
+      # - name: Upload Cypress artifacts
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: cypress-artifacts
+      #     path: |
+      #       cypress/screenshots
+      #       cypress/videos
+      #       cypress/logs
 
-      - name: Check for Changes
-        id: git_status
-        shell: bash
-        run: |
-          STATUS="$(git status --porcelain)"
-          echo "status<<EOF" >> "$GITHUB_OUTPUT"
-          echo "$STATUS" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
+      # - name: Check for Changes
+      #   id: git_status
+      #   shell: bash
+      #   run: |
+      #     STATUS="$(git status --porcelain)"
+      #     echo "status<<EOF" >> "$GITHUB_OUTPUT"
+      #     echo "$STATUS" >> "$GITHUB_OUTPUT"
+      #     echo "EOF" >> "$GITHUB_OUTPUT"
 
-      - name: Configure Git (only if changes)
-        if: steps.git_status.outputs.status != ''
-        run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+      # - name: Configure Git (only if changes)
+      #   if: steps.git_status.outputs.status != ''
+      #   run: |
+      #     git config user.name "${{ github.actor }}"
+      #     git config user.email "${{ github.actor }}@users.noreply.github.com"
+      #     git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
 
-      - name: Commit and Push Changes
-        if: steps.git_status.outputs.status != ''
-        run: |
-          git add -A
-          git commit -m "Automated Cypress run results [skip ci]" || echo "No changes to commit."
-          git push origin HEAD:${{ github.ref_name }}
+      # - name: Commit and Push Changes
+      #   if: steps.git_status.outputs.status != ''
+      #   run: |
+      #     git add -A
+      #     git commit -m "Automated Cypress run results [skip ci]" || echo "No changes to commit."
+      #     git push origin HEAD:${{ github.ref_name }}
