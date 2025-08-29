@@ -1,1 +1,124 @@
 env: node: No such file or directory
+/bin/sh: npm: command not found
+/usr/local/lib/node_modules/npm/lib/cli/validate-engines.js:31
+    throw err
+    ^
+
+Error: EPERM: operation not permitted, uv_cwd
+    at process.wrappedCwd (node:internal/bootstrap/switches/does_own_process_state:142:28)
+    at process.cwd (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:10:19)
+    at new Config (/usr/local/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:71:19)
+    at new Npm (/usr/local/lib/node_modules/npm/lib/npm.js:67:19)
+    at module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:21:15)
+    at module.exports (/usr/local/lib/node_modules/npm/lib/cli/validate-engines.js:39:10)
+    at module.exports (/usr/local/lib/node_modules/npm/lib/cli.js:12:31)
+    at Object.<anonymous> (/usr/local/lib/node_modules/npm/bin/npm-cli.js:2:25)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10) {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'uv_cwd'
+}
+
+Node.js v23.9.0
+/usr/local/lib/node_modules/npm/lib/cli/validate-engines.js:31
+    throw err
+    ^
+
+Error: EPERM: operation not permitted, uv_cwd
+    at process.wrappedCwd (node:internal/bootstrap/switches/does_own_process_state:142:28)
+    at process.cwd (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:10:19)
+    at new Config (/usr/local/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:71:19)
+    at new Npm (/usr/local/lib/node_modules/npm/lib/npm.js:67:19)
+    at module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:21:15)
+    at module.exports (/usr/local/lib/node_modules/npm/lib/cli/validate-engines.js:39:10)
+    at module.exports (/usr/local/lib/node_modules/npm/lib/cli.js:12:31)
+    at Object.<anonymous> (/usr/local/lib/node_modules/npm/bin/npm-cli.js:2:25)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10) {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'uv_cwd'
+}
+
+Node.js v23.9.0
+=== Fri Aug 29 08:17:00 BST 2025 test run ===
+
+> stlplanningscraper@1.0.0 full
+> npm run scrape && npm run postprocess && git add . && git commit -m 'weekly local data push' && git push
+
+
+> stlplanningscraper@1.0.0 scrape
+> cypress run
+
+
+DevTools listening on ws://127.0.0.1:49395/devtools/browser/80144971-dbfd-4f9d-8468-6e018941d74e
+
+Opening `/dev/tty` failed (6): Device not configured
+tput: No value for $TERM and no -T specified
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.2                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v23.9.0 (/usr/local/Cellar/node/23.9.0/bin/node)                               │
+  │ Specs:          1 found (scrape.cy.js)                                                         │
+  │ Searched:       cypress/**/*.cy.{js,ts}                                                        │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  scrape.cy.js                                                                    (1 of 1)
+
+
+  Searches Edinburgh council planning site
+    ✓ Finds new applications (8841ms)
+    ✓ Saves new applications (60ms)
+
+
+  2 passing (11s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     11 seconds                                                                       │
+  │ Spec Ran:     scrape.cy.js                                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+Opening `/dev/tty` failed (6): Device not configured
+================================================================================
+
+tput: No value for $TERM and no -T specified
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  scrape.cy.js                             00:11        2        2        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:11        2        2        -        -        -  
+
+
+> stlplanningscraper@1.0.0 postprocess
+> node ./scripts/updateAndSave.js
+
+🔄  Running combined update…
+(node:3265) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/gordonmaloney/Desktop/Coding/stlplanningscraper/scripts/updateAndSave.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✅ applications.json updated (100 records)
+✅ NewData.jsx written to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/data/NewData.jsx
+✅ NewData.json written to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/data/NewData.json
