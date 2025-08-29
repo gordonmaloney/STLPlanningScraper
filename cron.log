@@ -122,3 +122,87 @@ To eliminate this warning, add "type": "module" to /Users/gordonmaloney/Desktop/
 ✅ applications.json updated (100 records)
 ✅ NewData.jsx written to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/data/NewData.jsx
 ✅ NewData.json written to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/data/NewData.json
+[main e4becf8] weekly local data push
+ 1 file changed, 123 insertions(+)
+To github.com:gordonmaloney/STLPlanningScraper.git
+   fa9fd31..e4becf8  main -> main
+=== Fri Aug 29 08:18:00 BST 2025 test run ===
+
+> stlplanningscraper@1.0.0 full
+> npm run scrape && npm run postprocess && git add . && git commit -m 'weekly local data push' && git push
+
+
+> stlplanningscraper@1.0.0 scrape
+> cypress run
+
+
+DevTools listening on ws://127.0.0.1:49582/devtools/browser/f8e28ec8-678a-46a6-88b8-fdfd352022b8
+
+Opening `/dev/tty` failed (6): Device not configured
+tput: No value for $TERM and no -T specified
+================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.2                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v23.9.0 (/usr/local/Cellar/node/23.9.0/bin/node)                               │
+  │ Specs:          1 found (scrape.cy.js)                                                         │
+  │ Searched:       cypress/**/*.cy.{js,ts}                                                        │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  scrape.cy.js                                                                    (1 of 1)
+
+
+  Searches Edinburgh council planning site
+    ✓ Finds new applications (6136ms)
+    ✓ Saves new applications (52ms)
+
+
+  2 passing (8s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     8 seconds                                                                        │
+  │ Spec Ran:     scrape.cy.js                                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+Opening `/dev/tty` failed (6): Device not configured
+================================================================================
+
+tput: No value for $TERM and no -T specified
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  scrape.cy.js                             00:08        2        2        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:08        2        2        -        -        -  
+
+
+> stlplanningscraper@1.0.0 postprocess
+> node ./scripts/updateAndSave.js
+
+🔄  Running combined update…
+(node:4857) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/gordonmaloney/Desktop/Coding/stlplanningscraper/scripts/updateAndSave.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✅ applications.json updated (100 records)
+✅ NewData.jsx written to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/data/NewData.jsx
+✅ NewData.json written to /Users/gordonmaloney/Desktop/Coding/stlplanningscraper/data/NewData.json
