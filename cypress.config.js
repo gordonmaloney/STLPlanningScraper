@@ -4,10 +4,14 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   // top‑level Cypress settings
   defaultCommandTimeout: 10000,
-  screenshotOnRunFailure: false,
+  screenshotOnRunFailure: true,
   watchForFileChanges: false,
 
   e2e: {
+
+//added for highlands
+    chromeWebSecurity: false,
+
     // your specs live under cypress/, not just e2e/
     specPattern: "cypress/**/*.cy.{js,ts}",
 

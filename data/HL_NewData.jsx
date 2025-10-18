@@ -1,0 +1,122 @@
+export const HL_PlanningApps = [
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3K1J8IHFIQ00&activeTab=summary",
+    "address": "Sporran Cottage Ruthven Road Kingussie PH21 1EN",
+    "postcode": "PH21 1EN",
+    "received": "Received: Fri 03 Oct 2025",
+    "validated": "Validated: Tue 14 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.078603",
+    "longitude": "-4.053786",
+    "reference": "Ref. No: 25/03733/FUL",
+    "title": "Use of property as short term let and house"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3CMUYIHMNS00&activeTab=summary",
+    "address": "Clachamish House 4 Clachamish Portree Isle Of Skye IV51 9NY",
+    "postcode": "IV51 9NY",
+    "received": "Received: Mon 29 Sep 2025",
+    "validated": "Validated: Tue 14 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.495928",
+    "longitude": "-6.373844",
+    "reference": "Ref. No: 25/03667/FUL",
+    "title": "Siting of Shepherd's hut for short term letting accommodation"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2ZLGBIHM0600&activeTab=summary",
+    "address": "55 High Street Wick KW1 4NE",
+    "postcode": "KW1 4NE",
+    "received": "Received: Mon 22 Sep 2025",
+    "validated": "Validated: Mon 06 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "58.442879",
+    "longitude": "-3.091955",
+    "reference": "Ref. No: 25/03577/FUL",
+    "title": "Change of use from Class 1a Retail to Short term let (Sui generis)"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2XXL7IHLWJ00&activeTab=summary",
+    "address": "Lynemore Croft Tomintoul Road Grantown-on-spey PH26 3NN",
+    "postcode": "PH26 3NN",
+    "received": "Received: Sun 21 Sep 2025",
+    "validated": "Validated: Thu 02 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.304199",
+    "longitude": "-3.568398",
+    "reference": "Ref. No: 25/03568/FUL",
+    "title": "Use of premises as short term letting unit"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2Q7THIHLH200&activeTab=summary",
+    "address": "Kila 79 Grampian Road Aviemore PH22 1RH",
+    "postcode": "PH22 1RH",
+    "received": "Received: Wed 17 Sep 2025",
+    "validated": "Validated: Tue 30 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.191184",
+    "longitude": "-3.82933",
+    "reference": "Ref. No: 25/03493/PIP",
+    "title": "Erection of 2no. houses to utilise as short term letting units"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2H6WQIHL4B00&activeTab=summary",
+    "address": "26 Ben Avon Place Aviemore PH22 1UY",
+    "postcode": "PH22 1UY",
+    "received": "Received: Fri 12 Sep 2025",
+    "validated": "Validated: Tue 30 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.19356",
+    "longitude": "-3.834595",
+    "reference": "Ref. No: 25/03423/CLE",
+    "title": "Short term letting unit"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2D4ZBIHKTG00&activeTab=summary",
+    "address": "1 Newton Gate Nairn IV12 4TS",
+    "postcode": "IV12 4TS",
+    "received": "Received: Wed 10 Sep 2025",
+    "validated": "Validated: Mon 22 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.582781",
+    "longitude": "-3.880394",
+    "reference": "Ref. No: 25/03392/FUL",
+    "title": "Conversion of annexe for short term letting"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2281VIHK8G00&activeTab=summary",
+    "address": "17 Corbett Place Aviemore PH22 1NZ",
+    "postcode": "PH22 1NZ",
+    "received": "Received: Thu 04 Sep 2025",
+    "validated": "Validated: Mon 29 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.202485",
+    "longitude": "-3.822672",
+    "reference": "Ref. No: 25/03319/FUL",
+    "title": "Use of property as short term letting unit"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T18BIIIHIHY00&activeTab=summary",
+    "address": "66 Holm Farm Road Culduthel Inverness IV2 6BE",
+    "postcode": "IV2 6BE",
+    "received": "Received: Tue 19 Aug 2025",
+    "validated": "Validated: Fri 05 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.4456",
+    "longitude": "-4.224879",
+    "reference": "Ref. No: 25/03067/FUL",
+    "title": "Use of property as short term let"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T0XFY6IHI1200&activeTab=summary",
+    "address": "Smithy Croft Station Road Carrbridge PH23 3AL",
+    "postcode": "PH23 3AL",
+    "received": "Received: Wed 13 Aug 2025",
+    "validated": "Validated: Tue 02 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.283315",
+    "longitude": "-3.81872",
+    "reference": "Ref. No: 25/03021/FUL",
+    "title": "Use of property as short term letting unit"
+  }
+];
