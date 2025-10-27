@@ -1,5 +1,17 @@
 export const HL_PlanningApps = [
   {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3JVULIHFHV00&activeTab=summary",
+    "address": "10 Margaret Street Inverness IV1 1LS",
+    "postcode": "IV1 1LS",
+    "received": "Received: Fri 03 Oct 2025",
+    "validated": "Validated: Tue 14 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.480326",
+    "longitude": "-4.225523",
+    "reference": "Ref. No: 25/03730/CLE",
+    "title": "Existing use as a short term let for over 10 years"
+  },
+  {
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3K1J8IHFIQ00&activeTab=summary",
     "address": "Sporran Cottage Ruthven Road Kingussie PH21 1EN",
     "postcode": "PH21 1EN",
@@ -10,18 +22,6 @@ export const HL_PlanningApps = [
     "longitude": "-4.053786",
     "reference": "Ref. No: 25/03733/FUL",
     "title": "Use of property as short term let and house"
-  },
-  {
-    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3CMUYIHMNS00&activeTab=summary",
-    "address": "Clachamish House 4 Clachamish Portree Isle Of Skye IV51 9NY",
-    "postcode": "IV51 9NY",
-    "received": "Received: Mon 29 Sep 2025",
-    "validated": "Validated: Tue 14 Oct 2025",
-    "status": "Status: Under Consideration",
-    "latitude": "57.495928",
-    "longitude": "-6.373844",
-    "reference": "Ref. No: 25/03667/FUL",
-    "title": "Siting of Shepherd's hut for short term letting accommodation"
   },
   {
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2ZLGBIHM0600&activeTab=summary",
