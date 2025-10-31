@@ -1,15 +1,15 @@
 [
   {
-    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3JVULIHFHV00&activeTab=summary",
-    "address": "10 Margaret Street Inverness IV1 1LS",
-    "postcode": "IV1 1LS",
-    "received": "Received: Fri 03 Oct 2025",
-    "validated": "Validated: Tue 14 Oct 2025",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3M2ZQIHFLM00&activeTab=summary",
+    "address": "8 Patterson Place High Burnside Aviemore PH22 1TZ",
+    "postcode": "PH22 1TZ",
+    "received": "Received: Sat 04 Oct 2025",
+    "validated": "Validated: Tue 28 Oct 2025",
     "status": "Status: Under Consideration",
-    "latitude": "57.480326",
-    "longitude": "-4.225523",
-    "reference": "Ref. No: 25/03730/CLE",
-    "title": "Existing use as a short term let for over 10 years"
+    "latitude": "57.203746",
+    "longitude": "-3.837882",
+    "reference": "Ref. No: 25/03747/CLE",
+    "title": "Use of property as short term let"
   },
   {
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3K1J8IHFIQ00&activeTab=summary",
@@ -22,6 +22,18 @@
     "longitude": "-4.053786",
     "reference": "Ref. No: 25/03733/FUL",
     "title": "Use of property as short term let and house"
+  },
+  {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3JVULIHFHV00&activeTab=summary",
+    "address": "10 Margaret Street Inverness IV1 1LS",
+    "postcode": "IV1 1LS",
+    "received": "Received: Fri 03 Oct 2025",
+    "validated": "Validated: Tue 14 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.480326",
+    "longitude": "-4.225523",
+    "reference": "Ref. No: 25/03730/CLE",
+    "title": "Existing use as a short term let for over 10 years"
   },
   {
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2ZLGBIHM0600&activeTab=summary",
@@ -84,6 +96,18 @@
     "title": "Conversion of annexe for short term letting"
   },
   {
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2B7ILIHKOR00&activeTab=summary",
+    "address": "Craggen Dhu Bonar Bridge Ardgay IV24 3AW",
+    "postcode": "IV24 3AW",
+    "received": "Received: Tue 09 Sep 2025",
+    "validated": "Validated: Wed 29 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.910612",
+    "longitude": "-4.371097",
+    "reference": "Ref. No: 25/03376/CLP",
+    "title": "To use existing dwellinghouse as a short term let"
+  },
+  {
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2281VIHK8G00&activeTab=summary",
     "address": "17 Corbett Place Aviemore PH22 1NZ",
     "postcode": "PH22 1NZ",
@@ -108,15 +132,15 @@
     "title": "Use of property as short term let"
   },
   {
-    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T0XFY6IHI1200&activeTab=summary",
-    "address": "Smithy Croft Station Road Carrbridge PH23 3AL",
-    "postcode": "PH23 3AL",
-    "received": "Received: Wed 13 Aug 2025",
-    "validated": "Validated: Tue 02 Sep 2025",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=SZ4E5EIHMEB00&activeTab=summary",
+    "address": "4 Dunhallin Hallin Isle Of Skye IV55 8GH",
+    "postcode": "IV55 8GH",
+    "received": "Received: Wed 09 Jul 2025",
+    "validated": "Validated: Wed 09 Jul 2025",
     "status": "Status: Under Consideration",
-    "latitude": "57.283315",
-    "longitude": "-3.81872",
-    "reference": "Ref. No: 25/03021/FUL",
-    "title": "Use of property as short term letting unit"
+    "latitude": "57.53617",
+    "longitude": "-6.594291",
+    "reference": "Ref. No: 25/02553/FUL",
+    "title": "Demolition of existing House and erection of House, erection of 2 semi detached short term letting units"
   }
 ]

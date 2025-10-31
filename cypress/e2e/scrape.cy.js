@@ -31,7 +31,7 @@ const getDaysAgo = (days) => {
   return date;
 };
 
-const START_DATE = getDaysAgo(90);
+const START_DATE = getDaysAgo(120);
 
 const getPostcode = (string) => {
   const match = string.match(/[a-z0-9]{3,4}\s[a-z0-9]{3,4}$/i);
