@@ -98,105 +98,103 @@ describe("Searches Edinburgh council planning site", () => {
 });
 
 
+const HL_SEARCH_PHRASES = ["short term let", "holiday let"];
+
 describe("Searches Highland council planning site", () => {
-  it("Finds new applications", () => {
-    cy.log("**Starting Highland search**");
-    cy.visit(HL_SEARCH_URL, { failOnStatusCode: false });
+  HL_SEARCH_PHRASES.forEach((phrase) => {
+    it(`Finds new applications for '${phrase}'`, () => {
+      cy.log(`**Starting Highland search for '${phrase}'**`);
+      cy.visit(HL_SEARCH_URL, { failOnStatusCode: false });
 
-    // Cookie banner (only click if present)
-    cy.get('button:contains("I Accept")', { timeout: 2000 }).then(($btn) => {
-      if ($btn.length) cy.wrap($btn).click({ force: true });
-    });
-
-    // Fill the form
-    cy.get("#description")
-      .scrollIntoView()
-      .should("be.visible")
-      .type(HL_SEARCH_PHRASE);
-    cy.get("#caseStatus")
-      .scrollIntoView()
-      .should("be.visible")
-      .select("Under Consideration");
-    cy.get("#applicationReceivedStart")
-      .scrollIntoView()
-      .should("be.visible")
-      .type(
-        [
-          START_DATE.getDate(),
-          START_DATE.getMonth() + 1,
-          START_DATE.getFullYear(),
-        ].join("/")
-      );
-
-    // Click the *correct* Search (scoped to the form that owns #description)
-    cy.get("#description")
-      .closest("form")
-      .within(() => {
-        cy.contains('input[type="submit"]', "Search").click();
+      // Cookie banner
+      cy.get('button:contains("I Accept")', { timeout: 2000 }).then(($btn) => {
+        if ($btn.length) cy.wrap($btn).click({ force: true });
       });
 
-    // Sanity check: still on the planning portal domain
-    cy.url().should("include", HL_URL_BASE);
+      // Fill the form
+      cy.get("#description")
+        .scrollIntoView()
+        .should("be.visible")
+        .clear()
+        .type(phrase);
+      cy.get("#caseStatus")
+        .scrollIntoView()
+        .should("be.visible")
+        .select("Under Consideration");
+      cy.get("#applicationReceivedStart")
+        .scrollIntoView()
+        .should("be.visible")
+        .clear()
+        .type(
+          [
+            START_DATE.getDate(),
+            START_DATE.getMonth() + 1,
+            START_DATE.getFullYear(),
+          ].join("/")
+        );
 
-    // Detect results page
-    cy.get(".content")
-      .then(($el) => {
-        const hasResults = $el.find("#resultsPerPage").length > 0;
-        cy.log(`Has results page selector: ${hasResults}`);
-        return cy.wrap(hasResults, { log: false });
-      })
-      .then((hasResults) => {
-        if (!hasResults) {
-          cy.log("**No results found**");
-          return;
-        }
-
-        cy.log("**Results found, setting to 100 per page**");
-        // Change results/page and click the *correct* Go (scoped to the select’s form)
-        cy.get("#resultsPerPage")
-          .scrollIntoView()
-          .select("100")
-          .closest("form")
-          .within(() => {
-            cy.contains('input[type="submit"]', "Go").click();
-          });
-
-        cy.url().should("include", HL_URL_BASE);
-
-        cy.get("#searchresults li").each(($li, index) => {
-          cy.log(`Processing application ${index + 1}`);
-
-          const $link = $li.find("a");
-          const [refNo, received, validated, status] = $li
-            .find(".metaInfo")
-            .text()
-            .trim()
-            .replace(/\n/g, "")
-            .replace(/\s+/g, " ")
-            .split(" | ");
-          const address = $li.find(".address").text().trim();
-
-          const application = {
-            link: `${HL_URL_BASE}${$link.attr("href")}`,
-            proposal: $link.text().trim(),
-            address,
-            postcode: getPostcode(address),
-            refNo,
-            received,
-            validated,
-            status,
-          };
-
-          cy.log(`Application: ${refNo} - ${address}`);
-          if (application.postcode) {
-            newHLApplications.push(application);
-          }
+      // Submit
+      cy.get("#description")
+        .closest("form")
+        .within(() => {
+          cy.contains('input[type="submit"]', "Search").click();
         });
-      });
+
+      // Check results
+      cy.get(".content")
+        .then(($el) => {
+          const hasResults = $el.find("#resultsPerPage").length > 0;
+          cy.log(`Has results page selector: ${hasResults}`);
+          return cy.wrap(hasResults, { log: false });
+        })
+        .then((hasResults) => {
+          if (!hasResults) {
+            cy.log(`**No results found for '${phrase}'**`);
+            return;
+          }
+
+          cy.log("**Results found, setting to 100 per page**");
+          cy.get("#resultsPerPage")
+            .scrollIntoView()
+            .select("100")
+            .closest("form")
+            .within(() => {
+              cy.contains('input[type="submit"]', "Go").click();
+            });
+
+          cy.get("#searchresults li").each(($li, index) => {
+            const $link = $li.find("a");
+            const [refNo, received, validated, status] = $li
+              .find(".metaInfo")
+              .text()
+              .trim()
+              .replace(/\n/g, "")
+              .replace(/\s+/g, " ")
+              .split(" | ");
+            const address = $li.find(".address").text().trim();
+
+            const application = {
+              phrase,
+              link: `${HL_URL_BASE}${$link.attr("href")}`,
+              proposal: $link.text().trim(),
+              address,
+              postcode: getPostcode(address),
+              refNo,
+              received,
+              validated,
+              status,
+            };
+
+            if (application.postcode) {
+              newHLApplications.push(application);
+            }
+          });
+        });
+    });
   });
 
-  it("Saves new applications", () => {
-    cy.log(`**Saving ${newHLApplications.length} application(s)**`);
+  it("Saves all Highland applications", () => {
+    cy.log(`**Saving ${newHLApplications.length} Highland application(s)**`);
     cy.writeFile(
       HL_APPLICATIONS_FILE,
       JSON.stringify(newHLApplications, null, 2)

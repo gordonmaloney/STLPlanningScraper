@@ -1,5 +1,6 @@
 [
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3M2ZQIHFLM00&activeTab=summary",
     "proposal": "Use of property as short term let",
     "address": "8 Patterson Place High Burnside Aviemore PH22 1TZ",
@@ -12,6 +13,7 @@
     "longitude": "-3.837882"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3K1J8IHFIQ00&activeTab=summary",
     "proposal": "Use of property as short term let and house",
     "address": "Sporran Cottage Ruthven Road Kingussie PH21 1EN",
@@ -24,6 +26,7 @@
     "longitude": "-4.053786"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3JVULIHFHV00&activeTab=summary",
     "proposal": "Existing use as a short term let for over 10 years",
     "address": "10 Margaret Street Inverness IV1 1LS",
@@ -36,6 +39,7 @@
     "longitude": "-4.225523"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2ZLGBIHM0600&activeTab=summary",
     "proposal": "Change of use from Class 1a Retail to Short term let (Sui generis)",
     "address": "55 High Street Wick KW1 4NE",
@@ -48,6 +52,7 @@
     "longitude": "-3.091955"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2XXL7IHLWJ00&activeTab=summary",
     "proposal": "Use of premises as short term letting unit",
     "address": "Lynemore Croft Tomintoul Road Grantown-on-spey PH26 3NN",
@@ -60,6 +65,7 @@
     "longitude": "-3.568398"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2Q7THIHLH200&activeTab=summary",
     "proposal": "Erection of 2no. houses to utilise as short term letting units",
     "address": "Kila 79 Grampian Road Aviemore PH22 1RH",
@@ -72,6 +78,7 @@
     "longitude": "-3.82933"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2H6WQIHL4B00&activeTab=summary",
     "proposal": "Short term letting unit",
     "address": "26 Ben Avon Place Aviemore PH22 1UY",
@@ -84,6 +91,7 @@
     "longitude": "-3.834595"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2D4ZBIHKTG00&activeTab=summary",
     "proposal": "Conversion of annexe for short term letting",
     "address": "1 Newton Gate Nairn IV12 4TS",
@@ -96,6 +104,7 @@
     "longitude": "-3.880394"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2B7ILIHKOR00&activeTab=summary",
     "proposal": "To use existing dwellinghouse as a short term let",
     "address": "Craggen Dhu Bonar Bridge Ardgay IV24 3AW",
@@ -108,6 +117,7 @@
     "longitude": "-4.371097"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2281VIHK8G00&activeTab=summary",
     "proposal": "Use of property as short term letting unit",
     "address": "17 Corbett Place Aviemore PH22 1NZ",
@@ -120,6 +130,7 @@
     "longitude": "-3.822672"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T18BIIIHIHY00&activeTab=summary",
     "proposal": "Use of property as short term let",
     "address": "66 Holm Farm Road Culduthel Inverness IV2 6BE",
@@ -132,6 +143,7 @@
     "longitude": "-4.224879"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=SZ4E5EIHMEB00&activeTab=summary",
     "proposal": "Demolition of existing House and erection of House, erection of 2 semi detached short term letting units",
     "address": "4 Dunhallin Hallin Isle Of Skye IV55 8GH",
@@ -142,5 +154,57 @@
     "status": "Status: Under Consideration",
     "latitude": "57.53617",
     "longitude": "-6.594291"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3E7PKIHMRA00&activeTab=summary",
+    "proposal": "Change of use from Garden Room to Holiday Letting Unit",
+    "address": "Riverside Lodge Riverside Road Kinlochleven PH50 4QH",
+    "postcode": "PH50 4QH",
+    "refNo": "Ref. No: 25/03679/FUL",
+    "received": "Received: Tue 30 Sep 2025",
+    "validated": "Validated: Fri 10 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "56.715016",
+    "longitude": "-4.965978"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3EMXQIHMTU00&activeTab=summary",
+    "proposal": "Change of use from home office to short term holiday let",
+    "address": "Garbh Chriochan Teangue Isle Of Skye IV44 8RE",
+    "postcode": "IV44 8RE",
+    "refNo": "Ref. No: 25/03688/FUL",
+    "received": "Received: Tue 30 Sep 2025",
+    "validated": "Validated: Tue 14 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.11307",
+    "longitude": "-5.857069"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T314X7IHM3K00&activeTab=summary",
+    "proposal": "Conversion from holiday letting accommodation to staff accommodation; alterations and extensions to form additional staff accommodation",
+    "address": "Residential Accommodation Onich Hotel Onich Fort William PH33 6RY",
+    "postcode": "PH33 6RY",
+    "refNo": "Ref. No: 25/03593/FUL",
+    "received": "Received: Tue 23 Sep 2025",
+    "validated": "Validated: Fri 26 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "56.70258",
+    "longitude": "-5.204807"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=SZE9SEIHMUN00&activeTab=summary",
+    "proposal": "Erection of 2no. holiday letting units",
+    "address": "Land 90M SE Of Alt-Na-Slat Invergarry PH35 4HS",
+    "postcode": "PH35 4HS",
+    "refNo": "Ref. No: 25/02618/FUL",
+    "received": "Received: Mon 14 Jul 2025",
+    "validated": "Validated: Mon 21 Jul 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.067562",
+    "longitude": "-5.087844"
   }
 ]

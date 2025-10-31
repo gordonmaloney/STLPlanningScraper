@@ -1,5 +1,6 @@
 export const HL_PlanningApps = [
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3M2ZQIHFLM00&activeTab=summary",
     "address": "8 Patterson Place High Burnside Aviemore PH22 1TZ",
     "postcode": "PH22 1TZ",
@@ -12,6 +13,7 @@ export const HL_PlanningApps = [
     "title": "Use of property as short term let"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3K1J8IHFIQ00&activeTab=summary",
     "address": "Sporran Cottage Ruthven Road Kingussie PH21 1EN",
     "postcode": "PH21 1EN",
@@ -24,6 +26,7 @@ export const HL_PlanningApps = [
     "title": "Use of property as short term let and house"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3JVULIHFHV00&activeTab=summary",
     "address": "10 Margaret Street Inverness IV1 1LS",
     "postcode": "IV1 1LS",
@@ -36,6 +39,7 @@ export const HL_PlanningApps = [
     "title": "Existing use as a short term let for over 10 years"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2ZLGBIHM0600&activeTab=summary",
     "address": "55 High Street Wick KW1 4NE",
     "postcode": "KW1 4NE",
@@ -48,6 +52,7 @@ export const HL_PlanningApps = [
     "title": "Change of use from Class 1a Retail to Short term let (Sui generis)"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2XXL7IHLWJ00&activeTab=summary",
     "address": "Lynemore Croft Tomintoul Road Grantown-on-spey PH26 3NN",
     "postcode": "PH26 3NN",
@@ -60,6 +65,7 @@ export const HL_PlanningApps = [
     "title": "Use of premises as short term letting unit"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2Q7THIHLH200&activeTab=summary",
     "address": "Kila 79 Grampian Road Aviemore PH22 1RH",
     "postcode": "PH22 1RH",
@@ -72,6 +78,7 @@ export const HL_PlanningApps = [
     "title": "Erection of 2no. houses to utilise as short term letting units"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2H6WQIHL4B00&activeTab=summary",
     "address": "26 Ben Avon Place Aviemore PH22 1UY",
     "postcode": "PH22 1UY",
@@ -84,6 +91,7 @@ export const HL_PlanningApps = [
     "title": "Short term letting unit"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2D4ZBIHKTG00&activeTab=summary",
     "address": "1 Newton Gate Nairn IV12 4TS",
     "postcode": "IV12 4TS",
@@ -96,6 +104,7 @@ export const HL_PlanningApps = [
     "title": "Conversion of annexe for short term letting"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2B7ILIHKOR00&activeTab=summary",
     "address": "Craggen Dhu Bonar Bridge Ardgay IV24 3AW",
     "postcode": "IV24 3AW",
@@ -108,6 +117,7 @@ export const HL_PlanningApps = [
     "title": "To use existing dwellinghouse as a short term let"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2281VIHK8G00&activeTab=summary",
     "address": "17 Corbett Place Aviemore PH22 1NZ",
     "postcode": "PH22 1NZ",
@@ -120,6 +130,7 @@ export const HL_PlanningApps = [
     "title": "Use of property as short term letting unit"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T18BIIIHIHY00&activeTab=summary",
     "address": "66 Holm Farm Road Culduthel Inverness IV2 6BE",
     "postcode": "IV2 6BE",
@@ -132,6 +143,7 @@ export const HL_PlanningApps = [
     "title": "Use of property as short term let"
   },
   {
+    "phrase": "short term let",
     "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=SZ4E5EIHMEB00&activeTab=summary",
     "address": "4 Dunhallin Hallin Isle Of Skye IV55 8GH",
     "postcode": "IV55 8GH",
@@ -142,5 +154,57 @@ export const HL_PlanningApps = [
     "longitude": "-6.594291",
     "reference": "Ref. No: 25/02553/FUL",
     "title": "Demolition of existing House and erection of House, erection of 2 semi detached short term letting units"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3E7PKIHMRA00&activeTab=summary",
+    "address": "Riverside Lodge Riverside Road Kinlochleven PH50 4QH",
+    "postcode": "PH50 4QH",
+    "received": "Received: Tue 30 Sep 2025",
+    "validated": "Validated: Fri 10 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "56.715016",
+    "longitude": "-4.965978",
+    "reference": "Ref. No: 25/03679/FUL",
+    "title": "Change of use from Garden Room to Holiday Letting Unit"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3EMXQIHMTU00&activeTab=summary",
+    "address": "Garbh Chriochan Teangue Isle Of Skye IV44 8RE",
+    "postcode": "IV44 8RE",
+    "received": "Received: Tue 30 Sep 2025",
+    "validated": "Validated: Tue 14 Oct 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.11307",
+    "longitude": "-5.857069",
+    "reference": "Ref. No: 25/03688/FUL",
+    "title": "Change of use from home office to short term holiday let"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T314X7IHM3K00&activeTab=summary",
+    "address": "Residential Accommodation Onich Hotel Onich Fort William PH33 6RY",
+    "postcode": "PH33 6RY",
+    "received": "Received: Tue 23 Sep 2025",
+    "validated": "Validated: Fri 26 Sep 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "56.70258",
+    "longitude": "-5.204807",
+    "reference": "Ref. No: 25/03593/FUL",
+    "title": "Conversion from holiday letting accommodation to staff accommodation; alterations and extensions to form additional staff accommodation"
+  },
+  {
+    "phrase": "holiday let",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=SZE9SEIHMUN00&activeTab=summary",
+    "address": "Land 90M SE Of Alt-Na-Slat Invergarry PH35 4HS",
+    "postcode": "PH35 4HS",
+    "received": "Received: Mon 14 Jul 2025",
+    "validated": "Validated: Mon 21 Jul 2025",
+    "status": "Status: Under Consideration",
+    "latitude": "57.067562",
+    "longitude": "-5.087844",
+    "reference": "Ref. No: 25/02618/FUL",
+    "title": "Erection of 2no. holiday letting units"
   }
 ];
