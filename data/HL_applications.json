@@ -1,16 +1,17 @@
 [
   {
     "phrase": "short term let",
-    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3M2ZQIHFLM00&activeTab=summary",
-    "proposal": "Use of property as short term let",
-    "address": "8 Patterson Place High Burnside Aviemore PH22 1TZ",
-    "postcode": "PH22 1TZ",
-    "refNo": "Ref. No: 25/03747/CLE",
-    "received": "Received: Sat 04 Oct 2025",
-    "validated": "Validated: Tue 28 Oct 2025",
+    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3RK78IHFV500&activeTab=summary",
+    "proposal": "The demolition of an existing cabin and replaced with three cabins for short term letting",
+    "address": "Allt Daraich Sligachan Carbost Isle Of Skye IV47 8SW",
+    "postcode": "IV47 8SW",
+    "refNo": "Ref. No: 25/03794/FUL",
+    "received": "Received: Tue 07 Oct 2025",
+    "validated": "Validated: Tue 04 Nov 2025",
     "status": "Status: Under Consideration",
-    "latitude": "57.203746",
-    "longitude": "-3.837882"
+    "council": "Highlands",
+    "latitude": "57.289829",
+    "longitude": "-6.174984"
   },
   {
     "phrase": "short term let",
@@ -22,21 +23,9 @@
     "received": "Received: Fri 03 Oct 2025",
     "validated": "Validated: Tue 14 Oct 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.078603",
     "longitude": "-4.053786"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T3JVULIHFHV00&activeTab=summary",
-    "proposal": "Existing use as a short term let for over 10 years",
-    "address": "10 Margaret Street Inverness IV1 1LS",
-    "postcode": "IV1 1LS",
-    "refNo": "Ref. No: 25/03730/CLE",
-    "received": "Received: Fri 03 Oct 2025",
-    "validated": "Validated: Tue 14 Oct 2025",
-    "status": "Status: Under Consideration",
-    "latitude": "57.480326",
-    "longitude": "-4.225523"
   },
   {
     "phrase": "short term let",
@@ -48,6 +37,7 @@
     "received": "Received: Mon 22 Sep 2025",
     "validated": "Validated: Mon 06 Oct 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "58.442879",
     "longitude": "-3.091955"
   },
@@ -61,6 +51,7 @@
     "received": "Received: Sun 21 Sep 2025",
     "validated": "Validated: Thu 02 Oct 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.304199",
     "longitude": "-3.568398"
   },
@@ -74,6 +65,7 @@
     "received": "Received: Wed 17 Sep 2025",
     "validated": "Validated: Tue 30 Sep 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.191184",
     "longitude": "-3.82933"
   },
@@ -87,21 +79,9 @@
     "received": "Received: Fri 12 Sep 2025",
     "validated": "Validated: Tue 30 Sep 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.19356",
     "longitude": "-3.834595"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://wam.highland.gov.uk/wam/applicationDetails.do?keyVal=T2D4ZBIHKTG00&activeTab=summary",
-    "proposal": "Conversion of annexe for short term letting",
-    "address": "1 Newton Gate Nairn IV12 4TS",
-    "postcode": "IV12 4TS",
-    "refNo": "Ref. No: 25/03392/FUL",
-    "received": "Received: Wed 10 Sep 2025",
-    "validated": "Validated: Mon 22 Sep 2025",
-    "status": "Status: Under Consideration",
-    "latitude": "57.582781",
-    "longitude": "-3.880394"
   },
   {
     "phrase": "short term let",
@@ -113,6 +93,7 @@
     "received": "Received: Tue 09 Sep 2025",
     "validated": "Validated: Wed 29 Oct 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.910612",
     "longitude": "-4.371097"
   },
@@ -126,6 +107,7 @@
     "received": "Received: Thu 04 Sep 2025",
     "validated": "Validated: Mon 29 Sep 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.202485",
     "longitude": "-3.822672"
   },
@@ -139,6 +121,7 @@
     "received": "Received: Tue 19 Aug 2025",
     "validated": "Validated: Fri 05 Sep 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.4456",
     "longitude": "-4.224879"
   },
@@ -152,6 +135,7 @@
     "received": "Received: Wed 09 Jul 2025",
     "validated": "Validated: Wed 09 Jul 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.53617",
     "longitude": "-6.594291"
   },
@@ -165,6 +149,7 @@
     "received": "Received: Tue 30 Sep 2025",
     "validated": "Validated: Fri 10 Oct 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "56.715016",
     "longitude": "-4.965978"
   },
@@ -178,6 +163,7 @@
     "received": "Received: Tue 30 Sep 2025",
     "validated": "Validated: Tue 14 Oct 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.11307",
     "longitude": "-5.857069"
   },
@@ -191,6 +177,7 @@
     "received": "Received: Tue 23 Sep 2025",
     "validated": "Validated: Fri 26 Sep 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "56.70258",
     "longitude": "-5.204807"
   },
@@ -204,6 +191,7 @@
     "received": "Received: Mon 14 Jul 2025",
     "validated": "Validated: Mon 21 Jul 2025",
     "status": "Status: Under Consideration",
+    "council": "Highlands",
     "latitude": "57.067562",
     "longitude": "-5.087844"
   }

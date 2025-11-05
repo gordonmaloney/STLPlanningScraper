@@ -159,6 +159,15 @@ async function main() {
     exportName: "HL_PlanningApps",
   });
 
+  // Highland (NEW)
+  await processDataset({
+    label: "CnE",
+    srcFile: path.join(dataDir, "CnE_applications.json"),
+    outJsonFile: path.join(dataDir, "CnE_NewData.json"),
+    outJsxFile: path.join(dataDir, "CnE_NewData.jsx"),
+    exportName: "CnE_PlanningApps",
+  });
+
   console.log("\n🎉  All done.");
 }
 
