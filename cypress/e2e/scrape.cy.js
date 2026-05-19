@@ -269,9 +269,11 @@ describe("Searches Highland council planning site", () => {
       cy.visit(HL_SEARCH_URL, { failOnStatusCode: false });
 
       // Cookie banner
+      /*
       cy.get('button:contains("I Accept")', { timeout: 2000 }).then(($btn) => {
         if ($btn.length) cy.wrap($btn).click({ force: true });
       });
+      */
 
       // Fill the form
       cy.get("#description")

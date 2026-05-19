@@ -1,1 +1,70 @@
-export const CnE_PlanningApps = [];
+export const CnE_PlanningApps = [
+  {
+    "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TE728YROL3400&activeTab=summary",
+    "address": "Comman Eachdraidh Uibhist A Tuath Old Carinish School Carinish Clachan Isle Of North Uist HS6 5EJ",
+    "postcode": "HS6 5EJ",
+    "received": "Received: Tue 28 Apr 2026",
+    "validated": "Validated: Fri 08 May 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "latitude": "57.526372",
+    "longitude": "-7.316236",
+    "reference": "Ref. No: 26/00152/PPD",
+    "title": "Alterations and extensions to: heritage centre, collection resource centre, exhibition area, boundary wall; provision of: launderette, additional parking; installation of: new roof, roof mounted PV panels, air source heat pumps, ground source heat pump bore holes, steps, defibrillator unit, hardstanding for food trailer, cattle grid, gate; replacement windows and works to schoolhouse for use as a heritage holiday let; construct shed.\n                            Show more description"
+  },
+  {
+    "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TDZNMMROL2L00&activeTab=summary",
+    "address": "19A Borve Berneray Isle Of North Uist",
+    "postcode": "orth Uist",
+    "received": "Received: Fri 24 Apr 2026",
+    "validated": "Validated: Fri 24 Apr 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "reference": "Ref. No: 26/00147/PPD",
+    "title": "Erect house with associated vehicle access, drainage and ASHP to be used as short term holiday let. Demolish existing cottage and outbuilding."
+  },
+  {
+    "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TDJ7XGROL1800&activeTab=summary",
+    "address": "Lochlea 23 Achmore Isle Of Lewis HS2 9DU",
+    "postcode": "HS2 9DU",
+    "received": "Received: Wed 15 Apr 2026",
+    "validated": "Validated: Thu 23 Apr 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "latitude": "58.169847",
+    "longitude": "-6.570437",
+    "reference": "Ref. No: 26/00139/PPD",
+    "title": "Existing partially erected garage to be altered to form ancillary holiday-let accommodation"
+  },
+  {
+    "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TCPCX2ROKZU00&activeTab=summary",
+    "address": "Millcroft Mingarry Daliburgh Isle Of South Uist HS8 5RY",
+    "postcode": "HS8 5RY",
+    "received": "Received: Mon 30 Mar 2026",
+    "validated": "Validated: Tue 14 Apr 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "latitude": "57.211256",
+    "longitude": "-7.397205",
+    "reference": "Ref. No: 26/00116/PPD",
+    "title": "Change of use of existing outbuilding to convert into self-contained annexe for use as a short term let; create new access"
+  },
+  {
+    "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=T97W8VROKO100&activeTab=summary",
+    "address": "Balranald West Tarbert Tarbert Isle Of Harris HS3 3BG",
+    "postcode": "HS3 3BG",
+    "received": "Received: Wed 21 Jan 2026",
+    "validated": "Validated: Wed 25 Mar 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "latitude": "57.902065",
+    "longitude": "-6.814201",
+    "reference": "Ref. No: 26/00019/PPD",
+    "title": "Change of use and extension of existing garden store to self-contained accommodation for short-term lets."
+  }
+];
