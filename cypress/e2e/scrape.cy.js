@@ -260,7 +260,7 @@ describe("Searches Edinburgh council planning site", () => {
 
 
 
-const HL_SEARCH_PHRASES = ["short term let", "holiday let"];
+const HL_SEARCH_PHRASES = ["short term let", "holiday let", "short term letting"];
 
 describe("Searches Highland council planning site", () => {
   HL_SEARCH_PHRASES.forEach((phrase) => {
