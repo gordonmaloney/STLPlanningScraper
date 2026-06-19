@@ -1,8 +1,20 @@
 [
   {
     "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TGDGHDROLAP00&activeTab=summary",
+    "address": "Beasdaire 5B Rushgarry Berneray Isle Of North Uist",
+    "postcode": "orth Uist",
+    "received": "Received: Tue 09 Jun 2026",
+    "validated": "Validated: Wed 17 Jun 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "reference": "Ref. No: 26/00219/PPD",
+    "title": "Erect house with associated infrastructure and services for short term let"
+  },
+  {
+    "phrase": "let",
     "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TE728YROL3400&activeTab=summary",
-    "address": "Comman Eachdraidh Uibhist A Tuath Old Carinish School Carinish Clachan Isle Of North Uist HS6 5EJ",
+    "address": "Comann Eachdraidh Uibhist A Tuath Old Carinish School Carinish Clachan Isle Of North Uist HS6 5EJ",
     "postcode": "HS6 5EJ",
     "received": "Received: Tue 28 Apr 2026",
     "validated": "Validated: Fri 08 May 2026",
@@ -15,29 +27,15 @@
   },
   {
     "phrase": "let",
-    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TDZNMMROL2L00&activeTab=summary",
-    "address": "19A Borve Berneray Isle Of North Uist",
-    "postcode": "orth Uist",
-    "received": "Received: Fri 24 Apr 2026",
-    "validated": "Validated: Fri 24 Apr 2026",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TDXZZARO04W00&activeTab=summary",
+    "address": "Pods 404 Smerclete Daliburgh Isle Of South Uist",
+    "postcode": "outh Uist",
+    "received": "Received: Thu 23 Apr 2026",
+    "validated": "Validated: Fri 22 May 2026",
     "status": "Status: Awaiting decision",
     "council": "CnE",
-    "reference": "Ref. No: 26/00147/PPD",
-    "title": "Erect house with associated vehicle access, drainage and ASHP to be used as short term holiday let. Demolish existing cottage and outbuilding."
-  },
-  {
-    "phrase": "let",
-    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TDJ7XGROL1800&activeTab=summary",
-    "address": "Lochlea 23 Achmore Isle Of Lewis HS2 9DU",
-    "postcode": "HS2 9DU",
-    "received": "Received: Wed 15 Apr 2026",
-    "validated": "Validated: Thu 23 Apr 2026",
-    "status": "Status: Awaiting decision",
-    "council": "CnE",
-    "latitude": "58.169847",
-    "longitude": "-6.570437",
-    "reference": "Ref. No: 26/00139/PPD",
-    "title": "Existing partially erected garage to be altered to form ancillary holiday-let accommodation"
+    "reference": "Ref. No: 26/00145/PPD",
+    "title": "Change of use of land to site 2no Pods (Caravan) for holiday let use"
   },
   {
     "phrase": "let",
