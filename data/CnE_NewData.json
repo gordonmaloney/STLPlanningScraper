@@ -1,6 +1,18 @@
 [
   {
     "phrase": "let",
+    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TGOKHPROLBR00&activeTab=summary",
+    "address": "Pod 3 Borve Berneray Isle Of North Uist",
+    "postcode": "orth Uist",
+    "received": "Received: Mon 15 Jun 2026",
+    "validated": "Validated: Tue 23 Jun 2026",
+    "status": "Status: Awaiting decision",
+    "council": "CnE",
+    "reference": "Ref. No: 26/00227/PPD",
+    "title": "Change of use of Land to site pod (caravan) for short term let"
+  },
+  {
+    "phrase": "let",
     "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TGDGHDROLAP00&activeTab=summary",
     "address": "Beasdaire 5B Rushgarry Berneray Isle Of North Uist",
     "postcode": "orth Uist",
@@ -24,45 +36,5 @@
     "longitude": "-7.316236",
     "reference": "Ref. No: 26/00152/PPD",
     "title": "Alterations and extensions to: heritage centre, collection resource centre, exhibition area, boundary wall; provision of: launderette, additional parking; installation of: new roof, roof mounted PV panels, air source heat pumps, ground source heat pump bore holes, steps, defibrillator unit, hardstanding for food trailer, cattle grid, gate; replacement windows and works to schoolhouse for use as a heritage holiday let; construct shed.\n                            Show more description"
-  },
-  {
-    "phrase": "let",
-    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TDXZZARO04W00&activeTab=summary",
-    "address": "Pods 404 Smerclete Daliburgh Isle Of South Uist",
-    "postcode": "outh Uist",
-    "received": "Received: Thu 23 Apr 2026",
-    "validated": "Validated: Fri 22 May 2026",
-    "status": "Status: Awaiting decision",
-    "council": "CnE",
-    "reference": "Ref. No: 26/00145/PPD",
-    "title": "Change of use of land to site 2no Pods (Caravan) for holiday let use"
-  },
-  {
-    "phrase": "let",
-    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=TCPCX2ROKZU00&activeTab=summary",
-    "address": "Millcroft Mingarry Daliburgh Isle Of South Uist HS8 5RY",
-    "postcode": "HS8 5RY",
-    "received": "Received: Mon 30 Mar 2026",
-    "validated": "Validated: Tue 14 Apr 2026",
-    "status": "Status: Awaiting decision",
-    "council": "CnE",
-    "latitude": "57.211256",
-    "longitude": "-7.397205",
-    "reference": "Ref. No: 26/00116/PPD",
-    "title": "Change of use of existing outbuilding to convert into self-contained annexe for use as a short term let; create new access"
-  },
-  {
-    "phrase": "let",
-    "link": "https://planning.cne-siar.gov.uk/PublicAccess/applicationDetails.do?keyVal=T97W8VROKO100&activeTab=summary",
-    "address": "Balranald West Tarbert Tarbert Isle Of Harris HS3 3BG",
-    "postcode": "HS3 3BG",
-    "received": "Received: Wed 21 Jan 2026",
-    "validated": "Validated: Wed 25 Mar 2026",
-    "status": "Status: Awaiting decision",
-    "council": "CnE",
-    "latitude": "57.902065",
-    "longitude": "-6.814201",
-    "reference": "Ref. No: 26/00019/PPD",
-    "title": "Change of use and extension of existing garden store to self-contained accommodation for short-term lets."
   }
 ]
