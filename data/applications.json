@@ -1,6 +1,61 @@
 [
   {
     "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TI9BIPEWMTN00&activeTab=summary",
+    "proposal": "Alterations to existing office at ground and lower ground to form a short term let accommodation. Install kitchen to lower ground floor room and re-fit existing shower room",
+    "address": "3 India Street New Town Edinburgh EH3 6HA",
+    "postcode": "EH3 6HA",
+    "refNo": "Ref. No: 26/02953/LBC · Received: Thu 16 Jul 2026 · Validated: Thu 16 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.955224",
+    "longitude": "-3.205101"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TI9BISEWMTQ00&activeTab=summary",
+    "proposal": "Alterations and change of use of existing office, arranged over ground and lower ground floor levels to short term let accommodation",
+    "address": "3 India Street New Town Edinburgh EH3 6HA",
+    "postcode": "EH3 6HA",
+    "refNo": "Ref. No: 26/02954/FULSTL · Received: Thu 16 Jul 2026 · Validated: Thu 16 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.955224",
+    "longitude": "-3.205101"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TI6B6MEWMNR00&activeTab=summary",
+    "proposal": "Change of use from residential to Short Term Let.",
+    "address": "PF2 4 Upper Bow Edinburgh EH1 2JN",
+    "postcode": "EH1 2JN",
+    "refNo": "Ref. No: 26/02940/FULSTL · Received: Tue 14 Jul 2026 · Validated: Tue 14 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.94898",
+    "longitude": "-3.193922"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THWTITEWM4800&activeTab=summary",
+    "proposal": "Change of use of premises to short term let accommodation.",
+    "address": "Flat 10 180 Woodhall Road Colinton Edinburgh EH13 0PJ",
+    "postcode": "EH13 0PJ",
+    "refNo": "Ref. No: 26/02878/FULSTL · Received: Thu 09 Jul 2026 · Validated: Mon 13 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.901815",
+    "longitude": "-3.283301"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THWIFAEWM2M00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "4F1 7 Johnston Terrace Old Town Edinburgh EH1 2PW",
+    "postcode": "EH1 2PW",
+    "refNo": "Ref. No: 26/02873/CLESTL · Received: Thu 09 Jul 2026 · Validated: Thu 09 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.948503",
+    "longitude": "-3.194916"
+  },
+  {
+    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THJE7QEWL5500&activeTab=summary",
     "proposal": "Change of use from flat (sui generis) to short term let (sui generis).",
     "address": "38 Dundee Terrace Edinburgh EH11 1DN",
@@ -12,14 +67,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THJJRTEWL6900&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "9 - 11 Balfour Street Edinburgh EH6 5DG",
-    "postcode": "EH6 5DG",
-    "refNo": "Ref. No: 26/02780/CLESTL · Received: Thu 02 Jul 2026 · Validated: Mon 06 Jul 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THJXO6EWL8000&activeTab=summary",
+    "proposal": "To continue use as short term let.",
+    "address": "Flat 2 10 Boat Green Edinburgh EH3 5LL",
+    "postcode": "EH3 5LL",
+    "refNo": "Ref. No: 26/02785/CLESTL · Received: Thu 02 Jul 2026 · Validated: Fri 03 Jul 2026",
     "council": "Edinburgh",
-    "latitude": "55.966204",
-    "longitude": "-3.177166"
+    "latitude": "55.964137",
+    "longitude": "-3.198633"
   },
   {
     "phrase": "short term let",
@@ -34,14 +89,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THJXO6EWL8000&activeTab=summary",
-    "proposal": "To continue use as short term let.",
-    "address": "Flat 2 10 Boat Green Edinburgh EH3 5LL",
-    "postcode": "EH3 5LL",
-    "refNo": "Ref. No: 26/02785/CLESTL · Received: Thu 02 Jul 2026 · Validated: Fri 03 Jul 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=THJJRTEWL6900&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "9 - 11 Balfour Street Edinburgh EH6 5DG",
+    "postcode": "EH6 5DG",
+    "refNo": "Ref. No: 26/02780/CLESTL · Received: Thu 02 Jul 2026 · Validated: Mon 06 Jul 2026",
     "council": "Edinburgh",
-    "latitude": "55.964137",
-    "longitude": "-3.198633"
+    "latitude": "55.966204",
+    "longitude": "-3.177166"
   },
   {
     "phrase": "short term let",
@@ -64,6 +119,17 @@
     "council": "Edinburgh",
     "latitude": "55.949725",
     "longitude": "-3.189413"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TH8QUREWKII00&activeTab=summary",
+    "proposal": "Retrospective change of use from residential flat (sui generis) to short term let, (sui generis), between 11 June to 31 August 2026 and 20 December to 1 January 2027.",
+    "address": "GF 8 Gloucester Place Edinburgh EH3 6EF",
+    "postcode": "EH3 6EF",
+    "refNo": "Ref. No: 26/02714/FULSTL · Received: Fri 26 Jun 2026 · Validated: Wed 15 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.956775",
+    "longitude": "-3.207247"
   },
   {
     "phrase": "short term let",
@@ -100,17 +166,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TH19FVEWJV200&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "1F2 5 East London Street Edinburgh EH7 4BN",
-    "postcode": "EH7 4BN",
-    "refNo": "Ref. No: 26/02637/CLESTL · Received: Mon 22 Jun 2026 · Validated: Mon 22 Jun 2026",
-    "council": "Edinburgh",
-    "latitude": "55.959289",
-    "longitude": "-3.189866"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TH0VJMEWJRM00&activeTab=summary",
     "proposal": "Change of use of residential flat to short term let (STL) retrospective.",
     "address": "1F3 98 Montgomery Street Edinburgh EH7 5HE",
@@ -119,6 +174,17 @@
     "council": "Edinburgh",
     "latitude": "55.959178",
     "longitude": "-3.177129"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TH19FVEWJV200&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "1F2 5 East London Street Edinburgh EH7 4BN",
+    "postcode": "EH7 4BN",
+    "refNo": "Ref. No: 26/02637/CLESTL · Received: Mon 22 Jun 2026 · Validated: Mon 22 Jun 2026",
+    "council": "Edinburgh",
+    "latitude": "55.959289",
+    "longitude": "-3.189866"
   },
   {
     "phrase": "short term let",
@@ -155,6 +221,17 @@
   },
   {
     "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGTRZJEWJHU00&activeTab=summary",
+    "proposal": "Proposed change of use to short term let accommodation for up to 3 months (June to August) of each calendar year.",
+    "address": "33 Dublin Street Lane North Edinburgh EH3 6NT",
+    "postcode": "EH3 6NT",
+    "refNo": "Ref. No: 26/02591/FULSTL · Received: Thu 18 Jun 2026 · Validated: Thu 18 Jun 2026",
+    "council": "Edinburgh",
+    "latitude": "55.958257",
+    "longitude": "-3.192605"
+  },
+  {
+    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGTP7YEWJHD00&activeTab=summary",
     "proposal": "Alterations and extension to existing detached garage to form a short term letting unit ancillary to existing house.",
     "address": "4 Gilberstoun Place Edinburgh EH15 2RB",
@@ -166,14 +243,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGTRZJEWJHU00&activeTab=summary",
-    "proposal": "Proposed change of use to short term let accommodation for up to 3 months (June to August) of each calendar year.",
-    "address": "33 Dublin Street Lane North Edinburgh EH3 6NT",
-    "postcode": "EH3 6NT",
-    "refNo": "Ref. No: 26/02591/FULSTL · Received: Thu 18 Jun 2026 · Validated: Thu 18 Jun 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGRRRJEWJ9N00&activeTab=summary",
+    "proposal": "Short term let accommodation.",
+    "address": "1F 15 West Maitland Street Edinburgh EH12 5EA",
+    "postcode": "EH12 5EA",
+    "refNo": "Ref. No: 26/02570/CLESTL · Received: Wed 17 Jun 2026 · Validated: Thu 18 Jun 2026",
     "council": "Edinburgh",
-    "latitude": "55.958257",
-    "longitude": "-3.192605"
+    "latitude": "55.94684",
+    "longitude": "-3.216177"
   },
   {
     "phrase": "short term let",
@@ -199,17 +276,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGRRRJEWJ9N00&activeTab=summary",
-    "proposal": "Short term let accommodation.",
-    "address": "1F 15 West Maitland Street Edinburgh EH12 5EA",
-    "postcode": "EH12 5EA",
-    "refNo": "Ref. No: 26/02570/CLESTL · Received: Wed 17 Jun 2026 · Validated: Thu 18 Jun 2026",
-    "council": "Edinburgh",
-    "latitude": "55.94684",
-    "longitude": "-3.216177"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGS8EYEWJDR00&activeTab=summary",
     "proposal": "Existing use as a short term let for over 10 years.",
     "address": "Flat 1 12 Lady Lawson Street Edinburgh EH3 9DS",
@@ -229,17 +295,6 @@
     "council": "Edinburgh",
     "latitude": "55.945977",
     "longitude": "-3.202492"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TGPRMZEWJ4300&activeTab=summary",
-    "proposal": "Change of use from residential flat (sui generis) to short term let (sui generis).",
-    "address": "39 Broughton Place Edinburgh EH1 3RR",
-    "postcode": "EH1 3RR",
-    "refNo": "Ref. No: 26/02548/FULSTL · Received: Tue 16 Jun 2026 · Validated: Tue 16 Jun 2026",
-    "council": "Edinburgh",
-    "latitude": "55.95891",
-    "longitude": "-3.187244"
   },
   {
     "phrase": "short term let",
@@ -298,17 +353,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TG5UV3EWHV000&activeTab=summary",
-    "proposal": "Change of use of an existing premises to a short term let (sui generis).",
-    "address": "13 Gardner's Crescent Edinburgh EH3 8DE",
-    "postcode": "EH3 8DE",
-    "refNo": "Ref. No: 26/02391/FULSTL · Received: Fri 05 Jun 2026 · Validated: Mon 15 Jun 2026",
-    "council": "Edinburgh",
-    "latitude": "55.945251",
-    "longitude": "-3.209578"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TG5PAMEWHTO00&activeTab=summary",
     "proposal": "Existing use as a short term let for over 10 years.",
     "address": "1F1 24 Duncan Street Edinburgh EH9 1SR",
@@ -317,6 +361,17 @@
     "council": "Edinburgh",
     "latitude": "55.935037",
     "longitude": "-3.178685"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TG5UV3EWHV000&activeTab=summary",
+    "proposal": "Change of use of an existing premises to a short term let (sui generis).",
+    "address": "13 Gardner's Crescent Edinburgh EH3 8DE",
+    "postcode": "EH3 8DE",
+    "refNo": "Ref. No: 26/02391/FULSTL · Received: Fri 05 Jun 2026 · Validated: Mon 15 Jun 2026",
+    "council": "Edinburgh",
+    "latitude": "55.945251",
+    "longitude": "-3.209578"
   },
   {
     "phrase": "short term let",
@@ -331,6 +386,17 @@
   },
   {
     "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFYLRCEWH9800&activeTab=summary",
+    "proposal": "Retrospective change of use to short term let (sui generis) use.",
+    "address": "3 Ratho Park Steading Ratho Park Road Ratho Newbridge EH28 8TF",
+    "postcode": "EH28 8TF",
+    "refNo": "Ref. No: 26/02330/FULSTL · Received: Mon 01 Jun 2026 · Validated: Tue 14 Jul 2026",
+    "council": "Edinburgh",
+    "latitude": "55.923898",
+    "longitude": "-3.365408"
+  },
+  {
+    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFSZ06EWH1L00&activeTab=summary",
     "proposal": "Internal alterations to form a short term let.",
     "address": "46 Charlotte Square Edinburgh EH2 4HQ",
@@ -342,22 +408,22 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFOVSCEWGOQ00&activeTab=summary",
-    "proposal": "Internal and externals alterations to form 5 short term let apartments, including window and door alterations.",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFP1BUEWGPY00&activeTab=summary",
+    "proposal": "Change of use from office to five short term let apartments (sui generis) and external alterations.",
     "address": "33 York Place Edinburgh EH1 3HP",
     "postcode": "EH1 3HP",
-    "refNo": "Ref. No: 26/02273/LBC · Received: Wed 27 May 2026 · Validated: Fri 05 Jun 2026",
+    "refNo": "Ref. No: 26/02277/FULSTL · Received: Wed 27 May 2026 · Validated: Tue 02 Jun 2026",
     "council": "Edinburgh",
     "latitude": "55.956127",
     "longitude": "-3.189785"
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFP1BUEWGPY00&activeTab=summary",
-    "proposal": "Change of use from office to five short term let apartments (sui generis) and external alterations.",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFOVSCEWGOQ00&activeTab=summary",
+    "proposal": "Internal and externals alterations to form 5 short term let apartments, including window and door alterations.",
     "address": "33 York Place Edinburgh EH1 3HP",
     "postcode": "EH1 3HP",
-    "refNo": "Ref. No: 26/02277/FULSTL · Received: Wed 27 May 2026 · Validated: Tue 02 Jun 2026",
+    "refNo": "Ref. No: 26/02273/LBC · Received: Wed 27 May 2026 · Validated: Fri 05 Jun 2026",
     "council": "Edinburgh",
     "latitude": "55.956127",
     "longitude": "-3.189785"
@@ -375,6 +441,17 @@
   },
   {
     "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFCDQXEWFXB00&activeTab=summary",
+    "proposal": "Ancillary building within the curtilage of the property has been used for short term letting purposes for a period greater than 10 years.",
+    "address": "East Morningside House 5 Clinton Road Edinburgh EH9 2AW",
+    "postcode": "EH9 2AW",
+    "refNo": "Ref. No: 26/02192/CLESTL · Received: Wed 20 May 2026 · Validated: Tue 09 Jun 2026",
+    "council": "Edinburgh",
+    "latitude": "55.932322",
+    "longitude": "-3.202164"
+  },
+  {
+    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFBX3KEWFTN00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
     "address": "2F1 7 Alvanley Terrace Edinburgh EH9 1DU",
@@ -386,14 +463,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFCDQXEWFXB00&activeTab=summary",
-    "proposal": "Ancillary building within the curtilage of the property has been used for short term letting purposes for a period greater than 10 years.",
-    "address": "East Morningside House 5 Clinton Road Edinburgh EH9 2AW",
-    "postcode": "EH9 2AW",
-    "refNo": "Ref. No: 26/02192/CLESTL · Received: Wed 20 May 2026 · Validated: Tue 09 Jun 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFAJ3BEWFRF00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "Flat 4 29 King's Stables Road Edinburgh EH1 2AP",
+    "postcode": "EH1 2AP",
+    "refNo": "Ref. No: 26/02163/CLESTL · Received: Tue 19 May 2026 · Validated: Tue 19 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.932322",
-    "longitude": "-3.202164"
+    "latitude": "55.947131",
+    "longitude": "-3.20115"
   },
   {
     "phrase": "short term let",
@@ -419,14 +496,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TFAJ3BEWFRF00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "Flat 4 29 King's Stables Road Edinburgh EH1 2AP",
-    "postcode": "EH1 2AP",
-    "refNo": "Ref. No: 26/02163/CLESTL · Received: Tue 19 May 2026 · Validated: Tue 19 May 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TF8G36EWFJM00&activeTab=summary",
+    "proposal": "Use of the property as short term let accommodation operating from the dwellinghouse on a continuous basis.",
+    "address": "321 Webster's Land Edinburgh EH1 2RU",
+    "postcode": "EH1 2RU",
+    "refNo": "Ref. No: 26/02133/CLESTL · Received: Mon 18 May 2026 · Validated: Mon 18 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.947131",
-    "longitude": "-3.20115"
+    "latitude": "55.946598",
+    "longitude": "-3.199549"
   },
   {
     "phrase": "short term let",
@@ -438,17 +515,6 @@
     "council": "Edinburgh",
     "latitude": "55.950988",
     "longitude": "-3.184167"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TF8G36EWFJM00&activeTab=summary",
-    "proposal": "Use of the property as short term let accommodation operating from the dwellinghouse on a continuous basis.",
-    "address": "321 Webster's Land Edinburgh EH1 2RU",
-    "postcode": "EH1 2RU",
-    "refNo": "Ref. No: 26/02133/CLESTL · Received: Mon 18 May 2026 · Validated: Mon 18 May 2026",
-    "council": "Edinburgh",
-    "latitude": "55.946598",
-    "longitude": "-3.199549"
   },
   {
     "phrase": "short term let",
@@ -507,17 +573,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEV93HEWMA400&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "Flat 1 68 Craighouse Gardens Edinburgh EH10 5UN",
-    "postcode": "EH10 5UN",
-    "refNo": "Ref. No: 26/02023/CLESTL · Received: Mon 11 May 2026 · Validated: Thu 14 May 2026",
-    "council": "Edinburgh",
-    "latitude": "55.925135",
-    "longitude": "-3.22393"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEVBVFEWMAI00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
     "address": "1F1 108 Lauriston Place Edinburgh EH3 9HX",
@@ -526,6 +581,17 @@
     "council": "Edinburgh",
     "latitude": "55.944545",
     "longitude": "-3.201871"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEV93HEWMA400&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "Flat 1 68 Craighouse Gardens Edinburgh EH10 5UN",
+    "postcode": "EH10 5UN",
+    "refNo": "Ref. No: 26/02023/CLESTL · Received: Mon 11 May 2026 · Validated: Thu 14 May 2026",
+    "council": "Edinburgh",
+    "latitude": "55.925135",
+    "longitude": "-3.22393"
   },
   {
     "phrase": "short term let",
@@ -562,17 +628,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TENX7ZEWLYF00&activeTab=summary",
-    "proposal": "Retrospective change of use of premises to short term let accommodation.",
-    "address": "30 Oxgangs Crescent Edinburgh EH13 9HL",
-    "postcode": "EH13 9HL",
-    "refNo": "Ref. No: 26/01983/FULSTL · Received: Thu 07 May 2026 · Validated: Thu 04 Jun 2026",
-    "council": "Edinburgh",
-    "latitude": "55.91075",
-    "longitude": "-3.221988"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TENUGOEWLXJ00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
     "address": "2F2 100 Thirlestane Road Edinburgh EH9 1AS",
@@ -584,14 +639,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TENZYMEWLYW00&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TENZYYEWLZ500&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "62 Rosemount Buildings Edinburgh EH3 8DD",
-    "postcode": "EH3 8DD",
-    "refNo": "Ref. No: 26/01984/CLESTL · Received: Thu 07 May 2026 · Validated: Thu 07 May 2026",
+    "address": "3F1 58 Marchmont Crescent Edinburgh EH9 1HE",
+    "postcode": "EH9 1HE",
+    "refNo": "Ref. No: 26/01986/CLESTL · Received: Thu 07 May 2026 · Validated: Thu 07 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.944611",
-    "longitude": "-3.210711"
+    "latitude": "55.93712",
+    "longitude": "-3.19298"
   },
   {
     "phrase": "short term let",
@@ -606,14 +661,47 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TENZYYEWLZ500&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TENZYMEWLYW00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "3F1 58 Marchmont Crescent Edinburgh EH9 1HE",
-    "postcode": "EH9 1HE",
-    "refNo": "Ref. No: 26/01986/CLESTL · Received: Thu 07 May 2026 · Validated: Thu 07 May 2026",
+    "address": "62 Rosemount Buildings Edinburgh EH3 8DD",
+    "postcode": "EH3 8DD",
+    "refNo": "Ref. No: 26/01984/CLESTL · Received: Thu 07 May 2026 · Validated: Thu 07 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.93712",
-    "longitude": "-3.19298"
+    "latitude": "55.944611",
+    "longitude": "-3.210711"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEMGFHEWLUV00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "PF1 3 Lord Russell Place Edinburgh EH9 1NQ",
+    "postcode": "EH9 1NQ",
+    "refNo": "Ref. No: 26/01974/CLESTL · Received: Wed 06 May 2026 · Validated: Wed 06 May 2026",
+    "council": "Edinburgh",
+    "latitude": "55.939306",
+    "longitude": "-3.182401"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEM5BGEWLRA00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "2F1 87 Bruntsfield Place Edinburgh EH10 4HG",
+    "postcode": "EH10 4HG",
+    "refNo": "Ref. No: 26/01959/CLESTL · Received: Wed 06 May 2026 · Validated: Wed 06 May 2026",
+    "council": "Edinburgh",
+    "latitude": "55.937643",
+    "longitude": "-3.206604"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEMGFLEWLUY00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "1F2 5 Edina Place Edinburgh EH7 5RN",
+    "postcode": "EH7 5RN",
+    "refNo": "Ref. No: 26/01975/CLESTL · Received: Wed 06 May 2026 · Validated: Tue 12 May 2026",
+    "council": "Edinburgh",
+    "latitude": "55.959554",
+    "longitude": "-3.170621"
   },
   {
     "phrase": "short term let",
@@ -639,39 +727,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEM5BGEWLRA00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "2F1 87 Bruntsfield Place Edinburgh EH10 4HG",
-    "postcode": "EH10 4HG",
-    "refNo": "Ref. No: 26/01959/CLESTL · Received: Wed 06 May 2026 · Validated: Wed 06 May 2026",
-    "council": "Edinburgh",
-    "latitude": "55.937643",
-    "longitude": "-3.206604"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEMGFHEWLUV00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "PF1 3 Lord Russell Place Edinburgh EH9 1NQ",
-    "postcode": "EH9 1NQ",
-    "refNo": "Ref. No: 26/01974/CLESTL · Received: Wed 06 May 2026 · Validated: Wed 06 May 2026",
-    "council": "Edinburgh",
-    "latitude": "55.939306",
-    "longitude": "-3.182401"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEMGFLEWLUY00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "1F2 5 Edina Place Edinburgh EH7 5RN",
-    "postcode": "EH7 5RN",
-    "refNo": "Ref. No: 26/01975/CLESTL · Received: Wed 06 May 2026 · Validated: Tue 12 May 2026",
-    "council": "Edinburgh",
-    "latitude": "55.959554",
-    "longitude": "-3.170621"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEK2B0EWLJF00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
     "address": "2F3 41A Broughton Street Edinburgh EH1 3JU",
@@ -683,14 +738,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEKANCEWLL900&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEK53FEWLJU00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "Flat 2 20 Jamaica Mews Edinburgh EH3 6HW",
-    "postcode": "EH3 6HW",
-    "refNo": "Ref. No: 26/01940/CLESTL · Received: Tue 05 May 2026 · Validated: Fri 15 May 2026",
+    "address": "12 Montpelier Park Edinburgh EH10 4NJ",
+    "postcode": "EH10 4NJ",
+    "refNo": "Ref. No: 26/01931/CLESTL · Received: Tue 05 May 2026 · Validated: Tue 05 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.955876",
-    "longitude": "-3.204608"
+    "latitude": "55.936217",
+    "longitude": "-3.210945"
   },
   {
     "phrase": "short term let",
@@ -705,14 +760,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEK53FEWLJU00&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEKANCEWLL900&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "12 Montpelier Park Edinburgh EH10 4NJ",
-    "postcode": "EH10 4NJ",
-    "refNo": "Ref. No: 26/01931/CLESTL · Received: Tue 05 May 2026 · Validated: Tue 05 May 2026",
+    "address": "Flat 2 20 Jamaica Mews Edinburgh EH3 6HW",
+    "postcode": "EH3 6HW",
+    "refNo": "Ref. No: 26/01940/CLESTL · Received: Tue 05 May 2026 · Validated: Fri 15 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.936217",
-    "longitude": "-3.210945"
+    "latitude": "55.955876",
+    "longitude": "-3.204608"
   },
   {
     "phrase": "short term let",
@@ -749,47 +804,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAVR0EWL2800&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAVRCEWL2B00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "Flat 9 36 Grindlay Street Edinburgh EH3 9AP",
-    "postcode": "EH3 9AP",
-    "refNo": "Ref. No: 26/01852/CLESTL · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
+    "address": "2F1 56 Grove Street Edinburgh EH3 8AT",
+    "postcode": "EH3 8AT",
+    "refNo": "Ref. No: 26/01853/CLESTL · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.946745",
-    "longitude": "-3.204789"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEB1B7EWL3F00&activeTab=summary",
-    "proposal": "Internal and external alterations to provide shop bakery accommodation on the ground floor and short term lets to the lower ground and basement levels forming a new access from Stephenlaw's Close.\n                            Show more description",
-    "address": "15 Blair Street Edinburgh EH1 1QR",
-    "postcode": "EH1 1QR",
-    "refNo": "Ref. No: 26/01858/LBC · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.949094",
-    "longitude": "-3.18776"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAQ7QEWL1900&activeTab=summary",
-    "proposal": "Internal alterations and change of use from office to serviced short term let apartments (as amended).",
-    "address": "1F30 2 Commercial Street Edinburgh EH6 6JA",
-    "postcode": "EH6 6JA",
-    "refNo": "Ref. No: 26/01848/LBC · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.976387",
-    "longitude": "-3.171178"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAYJBEWL2X00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "BF2 31 Angle Park Terrace Edinburgh EH11 2JT",
-    "postcode": "EH11 2JT",
-    "refNo": "Ref. No: 26/01855/CLESTL · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.938025",
-    "longitude": "-3.225282"
+    "latitude": "55.943828",
+    "longitude": "-3.211807"
   },
   {
     "phrase": "short term let",
@@ -804,47 +826,25 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAVRCEWL2B00&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAVR0EWL2800&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "2F1 56 Grove Street Edinburgh EH3 8AT",
-    "postcode": "EH3 8AT",
-    "refNo": "Ref. No: 26/01853/CLESTL · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
+    "address": "Flat 9 36 Grindlay Street Edinburgh EH3 9AP",
+    "postcode": "EH3 9AP",
+    "refNo": "Ref. No: 26/01852/CLESTL · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.943828",
-    "longitude": "-3.211807"
+    "latitude": "55.946745",
+    "longitude": "-3.204789"
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE93VJEWKX500&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TEAYJBEWL2X00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "Flat 14 14 Old Tolbooth Wynd Edinburgh EH8 8EQ",
-    "postcode": "EH8 8EQ",
-    "refNo": "Ref. No: 26/01830/CLESTL · Received: Wed 29 Apr 2026 · Validated: Fri 08 May 2026",
+    "address": "BF2 31 Angle Park Terrace Edinburgh EH11 2JT",
+    "postcode": "EH11 2JT",
+    "refNo": "Ref. No: 26/01855/CLESTL · Received: Thu 30 Apr 2026 · Validated: Thu 30 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.952333",
-    "longitude": "-3.180733"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE96NBEWKXP00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "17A Montague Street Edinburgh EH8 9QT",
-    "postcode": "EH8 9QT",
-    "refNo": "Ref. No: 26/01834/CLESTL · Received: Wed 29 Apr 2026 · Validated: Wed 29 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.941988",
-    "longitude": "-3.18101"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE9EZ4EWKYN00&activeTab=summary",
-    "proposal": "Internal alterations and change of use from commercial to short term let visitor accommodation.",
-    "address": "3 Alva Street Edinburgh EH2 4PH",
-    "postcode": "EH2 4PH",
-    "refNo": "Ref. No: 26/01838/FULSTL · Received: Wed 29 Apr 2026 · Validated: Wed 29 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.950597",
-    "longitude": "-3.209665"
+    "latitude": "55.938025",
+    "longitude": "-3.225282"
   },
   {
     "phrase": "short term let",
@@ -859,36 +859,36 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE76F5EWKPA00&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE93VJEWKX500&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "1F1 9 High Street Edinburgh EH1 1SR",
-    "postcode": "EH1 1SR",
-    "refNo": "Ref. No: 26/01806/CLESTL · Received: Tue 28 Apr 2026 · Validated: Tue 28 Apr 2026",
+    "address": "Flat 14 14 Old Tolbooth Wynd Edinburgh EH8 8EQ",
+    "postcode": "EH8 8EQ",
+    "refNo": "Ref. No: 26/01830/CLESTL · Received: Wed 29 Apr 2026 · Validated: Fri 08 May 2026",
     "council": "Edinburgh",
-    "latitude": "55.950675",
-    "longitude": "-3.184926"
+    "latitude": "55.952333",
+    "longitude": "-3.180733"
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE798KEWKQ000&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "1F1 62 Thistle Street Edinburgh EH2 1EN",
-    "postcode": "EH2 1EN",
-    "refNo": "Ref. No: 26/01808/CLESTL · Received: Tue 28 Apr 2026 · Validated: Tue 28 Apr 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE9EZ4EWKYN00&activeTab=summary",
+    "proposal": "Internal alterations and change of use from commercial to short term let visitor accommodation.",
+    "address": "3 Alva Street Edinburgh EH2 4PH",
+    "postcode": "EH2 4PH",
+    "refNo": "Ref. No: 26/01838/FULSTL · Received: Wed 29 Apr 2026 · Validated: Wed 29 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.953888",
-    "longitude": "-3.199262"
+    "latitude": "55.950597",
+    "longitude": "-3.209665"
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE7987EWKPW00&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE96NBEWKXP00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "2F1 25 Montpelier Edinburgh EH10 4LY",
-    "postcode": "EH10 4LY",
-    "refNo": "Ref. No: 26/01807/CLESTL · Received: Tue 28 Apr 2026 · Validated: Tue 28 Apr 2026",
+    "address": "17A Montague Street Edinburgh EH8 9QT",
+    "postcode": "EH8 9QT",
+    "refNo": "Ref. No: 26/01834/CLESTL · Received: Wed 29 Apr 2026 · Validated: Wed 29 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.936778",
-    "longitude": "-3.210499"
+    "latitude": "55.941988",
+    "longitude": "-3.18101"
   },
   {
     "phrase": "short term let",
@@ -925,14 +925,36 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE5BRCEWKHG00&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE76F5EWKPA00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "1 Riddle's Court 322 Lawnmarket Edinburgh EH1 2PQ",
-    "postcode": "EH1 2PQ",
-    "refNo": "Ref. No: 26/01774/CLESTL · Received: Mon 27 Apr 2026 · Validated: Mon 27 Apr 2026",
+    "address": "1F1 9 High Street Edinburgh EH1 1SR",
+    "postcode": "EH1 1SR",
+    "refNo": "Ref. No: 26/01806/CLESTL · Received: Tue 28 Apr 2026 · Validated: Tue 28 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.949172",
-    "longitude": "-3.193623"
+    "latitude": "55.950675",
+    "longitude": "-3.184926"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE798KEWKQ000&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "1F1 62 Thistle Street Edinburgh EH2 1EN",
+    "postcode": "EH2 1EN",
+    "refNo": "Ref. No: 26/01808/CLESTL · Received: Tue 28 Apr 2026 · Validated: Tue 28 Apr 2026",
+    "council": "Edinburgh",
+    "latitude": "55.953888",
+    "longitude": "-3.199262"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE7987EWKPW00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "2F1 25 Montpelier Edinburgh EH10 4LY",
+    "postcode": "EH10 4LY",
+    "refNo": "Ref. No: 26/01807/CLESTL · Received: Tue 28 Apr 2026 · Validated: Tue 28 Apr 2026",
+    "council": "Edinburgh",
+    "latitude": "55.936778",
+    "longitude": "-3.210499"
   },
   {
     "phrase": "short term let",
@@ -944,6 +966,17 @@
     "council": "Edinburgh",
     "latitude": "55.966735",
     "longitude": "-3.177086"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE5BRCEWKHG00&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "1 Riddle's Court 322 Lawnmarket Edinburgh EH1 2PQ",
+    "postcode": "EH1 2PQ",
+    "refNo": "Ref. No: 26/01774/CLESTL · Received: Mon 27 Apr 2026 · Validated: Mon 27 Apr 2026",
+    "council": "Edinburgh",
+    "latitude": "55.949172",
+    "longitude": "-3.193623"
   },
   {
     "phrase": "short term let",
@@ -969,17 +1002,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE5EKJEWKI900&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "11 Sloan Street Edinburgh EH6 8PL",
-    "postcode": "EH6 8PL",
-    "refNo": "Ref. No: 26/01777/CLESTL · Received: Mon 27 Apr 2026 · Validated: Mon 27 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.965582",
-    "longitude": "-3.172646"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE58ZCEWKGT00&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
     "address": "1F3 107 Broughton Road Edinburgh EH7 4EG",
@@ -991,14 +1013,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDY5FYEWK7200&activeTab=summary",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TE5EKJEWKI900&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "Flat 23 89 Holyrood Road Edinburgh EH8 8BA",
-    "postcode": "EH8 8BA",
-    "refNo": "Ref. No: 26/01743/CLESTL · Received: Thu 23 Apr 2026 · Validated: Thu 23 Apr 2026",
+    "address": "11 Sloan Street Edinburgh EH6 8PL",
+    "postcode": "EH6 8PL",
+    "refNo": "Ref. No: 26/01777/CLESTL · Received: Mon 27 Apr 2026 · Validated: Mon 27 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.951194",
-    "longitude": "-3.176726"
+    "latitude": "55.965582",
+    "longitude": "-3.172646"
   },
   {
     "phrase": "short term let",
@@ -1010,6 +1032,17 @@
     "council": "Edinburgh",
     "latitude": "55.952329",
     "longitude": "-3.176393"
+  },
+  {
+    "phrase": "short term let",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDY5FYEWK7200&activeTab=summary",
+    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
+    "address": "Flat 23 89 Holyrood Road Edinburgh EH8 8BA",
+    "postcode": "EH8 8BA",
+    "refNo": "Ref. No: 26/01743/CLESTL · Received: Thu 23 Apr 2026 · Validated: Thu 23 Apr 2026",
+    "council": "Edinburgh",
+    "latitude": "55.951194",
+    "longitude": "-3.176726"
   },
   {
     "phrase": "short term let",
@@ -1035,17 +1068,6 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDWJ44EWK2Z00&activeTab=summary",
-    "proposal": "Change of use for part of the basement and an outshoot of an existing office building to form 1 No. studio apartment and 1 No. 2 bed apartment for short term let purposes.",
-    "address": "60 Constitution Street Edinburgh EH6 6RR",
-    "postcode": "EH6 6RR",
-    "refNo": "Ref. No: 26/01724/FULSTL · Received: Wed 22 Apr 2026 · Validated: Fri 24 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.974299",
-    "longitude": "-3.16775"
-  },
-  {
-    "phrase": "short term let",
     "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDW7Z4EWK1200&activeTab=summary",
     "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let visitor accommodation.",
     "address": "405 Webster's Land Edinburgh EH1 2RX",
@@ -1057,47 +1079,14 @@
   },
   {
     "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDMNJ5EWJEI00&activeTab=summary",
-    "proposal": "I have been operating a 2-bedroom short term let (STL) since 2014. I wish to apply for a CoL to continue my operation.",
-    "address": "3F1 33 Comely Bank Place Edinburgh EH4 1ER",
-    "postcode": "EH4 1ER",
-    "refNo": "Ref. No: 26/01623/CLESTL · Received: Fri 17 Apr 2026 · Validated: Mon 20 Apr 2026",
+    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDWJ44EWK2Z00&activeTab=summary",
+    "proposal": "Change of use for part of the basement and an outshoot of an existing office building to form 1 No. studio apartment and 1 No. 2 bed apartment for short term let purposes.",
+    "address": "60 Constitution Street Edinburgh EH6 6RR",
+    "postcode": "EH6 6RR",
+    "refNo": "Ref. No: 26/01724/FULSTL · Received: Wed 22 Apr 2026 · Validated: Fri 24 Apr 2026",
     "council": "Edinburgh",
-    "latitude": "55.958179",
-    "longitude": "-3.217077"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDN6ZFEWJHR00&activeTab=summary",
-    "proposal": "Short Term Let for holiday or business guests to Edinburgh. Maximum stay of 30 nights and minimum 3 nights.",
-    "address": "Flat 3 82 Logie Green Road Edinburgh EH7 4HQ",
-    "postcode": "EH7 4HQ",
-    "refNo": "Ref. No: 26/01637/CLESTL · Received: Fri 17 Apr 2026 · Validated: Tue 28 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.965426",
-    "longitude": "-3.197311"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDKVO1EWJ8I00&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "1F1 4 Upper Bow Edinburgh EH1 2JN",
-    "postcode": "EH1 2JN",
-    "refNo": "Ref. No: 26/01607/CLESTL · Received: Thu 16 Apr 2026 · Validated: Thu 16 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.94898",
-    "longitude": "-3.193922"
-  },
-  {
-    "phrase": "short term let",
-    "link": "https://citydev-portal.edinburgh.gov.uk/idoxpa-web/applicationDetails.do?keyVal=TDL9KDEWJB500&activeTab=summary",
-    "proposal": "Application for the issue of a Certificate of Lawfulness confirming its existing use as short term let accommodation is lawful.",
-    "address": "2F2 12 St Mary's Street Old Town Edinburgh EH1 1SU",
-    "postcode": "EH1 1SU",
-    "refNo": "Ref. No: 26/01616/CLESTL · Received: Thu 16 Apr 2026 · Validated: Thu 16 Apr 2026",
-    "council": "Edinburgh",
-    "latitude": "55.950364",
-    "longitude": "-3.183619"
+    "latitude": "55.974299",
+    "longitude": "-3.16775"
   },
   {
     "phrase": "holiday let",
